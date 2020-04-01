@@ -24,7 +24,8 @@ namespace = manaevent
 
 country_event = {
 	id = manaevent.1
-	title = "mana event 1"
+	title = "manaevent.1.t"
+	desc = "manaevent.1.d"
 	hidden = yes
 
 	trigger = {
@@ -382,17 +383,188 @@ country_event = {
 								}
 							}
 						}
-						add_base_production = 7
+
+						root = {
+							if = {
+								limit = {
+									NOT = {
+										has_institution = feudalism
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = feudalism
+										value = 100
+									}
+								}
+							}
+							
+							if = {
+								limit = {
+									AND = {
+										has_institution = feudalism
+										NOT = {
+											has_institution = renaissance
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = renaissance
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = renaissance
+										NOT = {
+											has_institution = new_world_i
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = new_world_i
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = new_world_i
+										NOT = {
+											has_institution = printing_press
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = printing_press
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = printing_press
+										NOT = {
+											has_institution = global_trade
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = global_trade
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = global_trade
+										NOT = {
+											has_institution = manufactories
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = manufactories
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = manufactories
+										NOT = {
+											has_institution = enlightenment
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = enlightenment
+										value = 100
+									}
+								}
+							}
+						}
+						
+
+						######## production
+						add_base_production = 1
 						add_scaled_local_dip_power = -10
-						add_institution_embracement = 40
 
-						add_base_tax = 7
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						############## tax
+						add_base_tax = 1
 						add_scaled_local_adm_power = -10
-						add_institution_embracement = 35
 
-						add_base_manpower = 5
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						############## manpower
+						add_base_manpower = 1
 						add_scaled_local_mil_power = -10
-						add_institution_embracement = 25
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
 					}
 				}
 			}
@@ -505,17 +677,187 @@ country_event = {
 									trade_goods = glass								}
 							}
 						}
-						add_base_production = 6
+
+						root = {
+							if = {
+								limit = {
+									NOT = {
+										has_institution = feudalism
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = feudalism
+										value = 100
+									}
+								}
+							}
+							
+							if = {
+								limit = {
+									AND = {
+										has_institution = feudalism
+										NOT = {
+											has_institution = renaissance
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = renaissance
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = renaissance
+										NOT = {
+											has_institution = new_world_i
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = new_world_i
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = new_world_i
+										NOT = {
+											has_institution = printing_press
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = printing_press
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = printing_press
+										NOT = {
+											has_institution = global_trade
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = global_trade
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = global_trade
+										NOT = {
+											has_institution = manufactories
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = manufactories
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = manufactories
+										NOT = {
+											has_institution = enlightenment
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = enlightenment
+										value = 100
+									}
+								}
+							}
+						}
+
+						######## production
+						add_base_production = 1
 						add_scaled_local_dip_power = -10
-						add_institution_embracement = 40
 
-						add_base_tax = 7
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						############## tax
+						add_base_tax = 1
 						add_scaled_local_adm_power = -10
-						add_institution_embracement = 35
 
-						add_base_manpower = 5
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						############## manpower
+						add_base_manpower = 1
 						add_scaled_local_mil_power = -10
-						add_institution_embracement = 25
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
 					}
 				}
 			}
@@ -608,17 +950,187 @@ country_event = {
 								}
 							
 						}
-						add_base_production = 5
+
+						root = {
+							if = {
+								limit = {
+									NOT = {
+										has_institution = feudalism
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = feudalism
+										value = 100
+									}
+								}
+							}
+							
+							if = {
+								limit = {
+									AND = {
+										has_institution = feudalism
+										NOT = {
+											has_institution = renaissance
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = renaissance
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = renaissance
+										NOT = {
+											has_institution = new_world_i
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = new_world_i
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = new_world_i
+										NOT = {
+											has_institution = printing_press
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = printing_press
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = printing_press
+										NOT = {
+											has_institution = global_trade
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = global_trade
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = global_trade
+										NOT = {
+											has_institution = manufactories
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = manufactories
+										value = 100
+									}
+								}
+							}
+
+							if = {
+								limit = {
+									AND = {
+										has_institution = manufactories
+										NOT = {
+											has_institution = enlightenment
+										}
+									}
+								}
+								prev = {
+									add_institution_embracement = {
+										which = enlightenment
+										value = 100
+									}
+								}
+							}
+						}
+
+						######## production
+						add_base_production = 1
 						add_scaled_local_dip_power = -10
-						add_institution_embracement = 40
 
-						add_base_tax = 7
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						############## tax
+						add_base_tax = 1
 						add_scaled_local_adm_power = -10
-						add_institution_embracement = 35
 
-						add_base_manpower = 5
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						############## manpower
+						add_base_manpower = 1
 						add_scaled_local_mil_power = -10
-						add_institution_embracement = 25
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
 					}
 				}
 			}
@@ -646,7 +1158,6 @@ country_event = {
 						}
 						add_base_production = 1
 						add_scaled_local_dip_power = -10
-						add_institution_embracement = 5
 					}
 				}
 			}
@@ -689,7 +1200,6 @@ country_event = {
 						}
 						add_base_production = 1
 						add_scaled_local_dip_power = -10
-						add_institution_embracement = 5
 					}
 				}
 			}
@@ -722,7 +1232,6 @@ country_event = {
 						}
 						add_base_manpower = 1
 						add_scaled_local_mil_power = -10
-						add_institution_embracement = 5
 					}
 				}
 			}
@@ -770,7 +1279,6 @@ country_event = {
 						}
 						add_base_tax = 1
 						add_scaled_local_adm_power = -10
-						add_institution_embracement = 5
 					}
 				}
 			}
@@ -793,7 +1301,6 @@ country_event = {
 						}
 						add_base_tax = 1
 						add_scaled_local_adm_power = -10
-						add_institution_embracement = 5
 					}
 				}
 			}
@@ -816,7 +1323,6 @@ country_event = {
 						}
 						add_base_tax = 1
 						add_scaled_local_adm_power = -10
-						add_institution_embracement = 5
 					}
 				}
 			}	
