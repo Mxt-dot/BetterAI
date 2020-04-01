@@ -32,9 +32,9 @@ country_event = {
         from = {
         	AND = {
         		OR = {
-	            dip_power = 900
-	            mil_power = 700
-	            adm_power = 800
+		            dip_power = 900
+		            mil_power = 700
+		            adm_power = 800
         		}
         	}
         	
@@ -46,7 +46,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			# doesnt have institution until 30 years after spawn outside of europe and has devable capital
+			####################################################### doesnt have institution until 30 years after spawn outside of europe and has devable capital
 			if = {
 				limit = {
 					OR = {
@@ -133,35 +133,121 @@ country_event = {
 									development = 20
 								}
 						}
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+						
+						root = {
+							if = {
+								limit = {
+									NOT = {
+										has_institution = feudalism
+									}
+								}
 
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_institution_embracement = {
-							which = feudalism
-							value = 40
+								capital_scope = {
+									add_institution_embracement = {
+										which = feudalism
+										value = 100
+									}
+								}
+							}
+							if = {
+								limit = {
+									has_institution = feudalism
+								}
+								capital_scope = {
+									add_institution_embracement = {
+										which = renaissance
+										value = 100
+									}
+								}
+								
+							}
+							if = {
+								limit = {
+									has_institution = renaissance
+								}
+								capital_scope = {
+									add_institution_embracement = {
+										which = new_world_i
+										value = 100
+									}
+								}
+								
+							}
+							if = {
+								limit = {
+									has_institution = new_world_i
+								}
+								capital_scope = {
+									add_institution_embracement = {
+										which = printing_press
+										value = 100
+									}
+								}
+								
+							}
+							if = {
+								limit = {
+									has_institution = printing_press
+								}
+								capital_scope = {
+									add_institution_embracement = {
+										which = global_trade
+										value = 100
+									}
+								}
+								
+							}
+							if = {
+								limit = {
+									has_institution = global_trade
+								}
+								capital_scope = {
+									add_institution_embracement = {
+										which = manufactories
+										value = 100
+									}
+								}
+								
+							}
+							if = {
+								limit = {
+									has_institution = manufactories
+								}
+								capital_scope = {
+									add_institution_embracement = {
+										which = enlightenment
+										value = 100
+									}
+								}
+								
+							}
 						}
+						######## production
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
 
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						############## tax
 						add_base_tax = 1
 						add_scaled_local_adm_power = -10
 
@@ -183,11 +269,7 @@ country_event = {
 						add_base_tax = 1
 						add_scaled_local_adm_power = -10
 
-						add_institution_embracement = {
-							which = feudalism
-							value = 35
-						}
-
+						############## manpower
 						add_base_manpower = 1
 						add_scaled_local_mil_power = -10
 
@@ -202,15 +284,11 @@ country_event = {
 
 						add_base_manpower = 1
 						add_scaled_local_mil_power = -10
-						add_institution_embracement = {
-							which = feudalism
-							value = 25
-						}
 					}
 				}
 			}
 
-			# doesnt have institution until 30 years after spawn outside of europe and DOESNT HAVE devable capital BUT HAS DEVABLE gold province
+			############################################# doesnt have institution until 30 years after spawn outside of europe and DOESNT HAVE devable capital BUT HAS DEVABLE gold province
 			if = {
 				limit = {
 					OR = {
@@ -317,7 +395,7 @@ country_event = {
 				}
 			}
 
-			# doesnt have institution until 30 years after spawn outside of europe and DOESNT HAVE devable capital HAS NO devable gold mine, BUT HAS DEVABLE trade goods
+			##################### doesnt have institution until 30 years after spawn outside of europe and DOESNT HAVE devable capital HAS NO devable gold mine, BUT HAS DEVABLE trade goods
 			if = {
 				limit = {
 					OR = {
@@ -440,7 +518,7 @@ country_event = {
 				}
 			}
 
-			# brute force institution
+			################################################################################################################ brute force institution
 			if = {
 				limit = {
 					OR = {
