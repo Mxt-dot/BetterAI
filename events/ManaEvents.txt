@@ -25,9 +25,7 @@ namespace = manaevent
 country_event = {
 	id = manaevent.1
 	title = "mana event 1"
-	hidden = no
-
-	localizedText: "THIS IS A DUMMY TEXT"
+	hidden = yes
 
 	trigger = {
         ai = yes
@@ -657,7 +655,8 @@ country_event = {
 				limit = {
 					root = {
 						dip_power = 950
-					}	
+					}
+					
 				}
 				root = {
 					random_owned_province = {
@@ -825,6 +824,6 @@ country_event = {
 	}
 
 	option = {
-		name = "localizedText"
+		name = "manaevent.1.a"
 	}
 }
