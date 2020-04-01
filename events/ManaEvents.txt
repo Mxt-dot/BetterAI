@@ -25,19 +25,23 @@ namespace = manaevent
 country_event = {
 	id = manaevent.1
 	title = "mana event 1"
-	hidden = yes
+	hidden = no
+
+	localizedText: "THIS IS A DUMMY TEXT"
 
 	trigger = {
         ai = yes
-        from = {
-        	AND = {
+        root = {
         		OR = {
-		            dip_power = 900
-		            mil_power = 700
-		            adm_power = 800
+        			AND = {
+						adm_power = 800
+        				dip_power = 900
+			            mil_power = 700
+        			}
+        			adm_power = 950
+        			dip_power = 950
+		            mil_power = 950
         		}
-        	}
-        	
         }
 	}
 	mean_time_to_happen = {
@@ -624,7 +628,9 @@ country_event = {
 			if = {
 				limit = {
 					AND = {
-						dip_power = 950
+						root = {
+							dip_power = 950
+						}
 						NOT = {
 		        			is_year = 1700
 		        		}
@@ -649,7 +655,9 @@ country_event = {
 
 			if = {
 				limit = {
-					dip_power = 950
+					root = {
+						dip_power = 950
+					}	
 				}
 				root = {
 					random_owned_province = {
@@ -817,6 +825,6 @@ country_event = {
 	}
 
 	option = {
-		name = "manaevent.1.a"
+		name = "localizedText"
 	}
 }
