@@ -127,26 +127,85 @@ country_event = {
 					
 				}
 				root = {
-					random_owned_province = {
+					capital_scope = {
 						limit = {
-							AND = {
 								NOT = {
 									development = 20
 								}
-								is_capital = yes
-							}
 						}
-						add_base_production = 8
+						add_base_production = 1
 						add_scaled_local_dip_power = -10
-						add_institution_embracement = 40
 
-						add_base_tax = 7
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_base_production = 1
+						add_scaled_local_dip_power = -10
+
+						add_institution_embracement = {
+							which = feudalism
+							value = 40
+						}
+
+						add_base_tax = 1
 						add_scaled_local_adm_power = -10
-						add_institution_embracement = 35
 
-						add_base_manpower = 5
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_base_tax = 1
+						add_scaled_local_adm_power = -10
+
+						add_institution_embracement = {
+							which = feudalism
+							value = 35
+						}
+
+						add_base_manpower = 1
 						add_scaled_local_mil_power = -10
-						add_institution_embracement = 25
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+
+						add_base_manpower = 1
+						add_scaled_local_mil_power = -10
+						add_institution_embracement = {
+							which = feudalism
+							value = 25
+						}
 					}
 				}
 			}
@@ -243,7 +302,7 @@ country_event = {
 								}
 							}
 						}
-						add_base_production = 8
+						add_base_production = 7
 						add_scaled_local_dip_power = -10
 						add_institution_embracement = 40
 
@@ -366,7 +425,7 @@ country_event = {
 									trade_goods = glass								}
 							}
 						}
-						add_base_production = 8
+						add_base_production = 6
 						add_scaled_local_dip_power = -10
 						add_institution_embracement = 40
 
@@ -469,7 +528,7 @@ country_event = {
 								}
 							
 						}
-						add_base_production = 8
+						add_base_production = 5
 						add_scaled_local_dip_power = -10
 						add_institution_embracement = 40
 
