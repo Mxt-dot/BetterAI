@@ -722,33 +722,24 @@ golden_age_of_piracy = {
 # THE AI BONUSES DEPENDING ON THE CURRENT AGE
 aiBonus_age_of_reformation = {
 	potential = {
-		AND = {
 			ai = yes
 			current_age = age_of_reformation
-		}
 	}
 	trigger = {
-		AND = {
 			ai = yes
-			current_age = age_of_reformation
-		}
-		
+			current_age = age_of_reformation		
 	}
 	land_forcelimit_modifier = 0.1
 }
 
 aiBonus_age_of_absolutism = {
 	potential = {
-		AND = {
 				ai = yes
 				current_age = age_of_absolutism
-			}
 	}
 	trigger = {
-		AND = {
 			ai = yes
 			current_age = age_of_absolutism
-		}
 	}
 	land_forcelimit_modifier = 0.25
 	manpower_recovery_speed = 0.1
@@ -756,17 +747,12 @@ aiBonus_age_of_absolutism = {
 
 aiBonus_age_of_revolutions = {
 	potential = {
-			AND = {
 				ai = yes
 				current_age = age_of_revolutions
-			}	
 	}
 	trigger = {
-		AND = {
 			ai = yes
 			current_age = age_of_revolutions
-		}
-		
 	}
 	land_forcelimit_modifier = 0.5
 	manpower_recovery_speed = 0.2

@@ -81,7 +81,7 @@ country_event = {
 						AND = {
 							is_year = 1530
 							NOT = {
-								has_institution = colonialism
+								has_institution = new_world_i
 							}
 							NOT = {
 								continent = europe
@@ -131,162 +131,209 @@ country_event = {
 				}
 				root = {
 					capital_scope = {
-						limit = {
+						if = {
+							limit = {
 								NOT = {
 									development = 20
 								}
-						}
-						
-						root = {
-							if = {
-								limit = {
-									NOT = {
+							}
+							root = {
+								if = {
+									limit = {
+										NOT = {
+											has_institution = feudalism
+										}
+									}
+
+									capital_scope = {
+										if = {
+											limit = {
+												NOT = {
+													development = 20
+												}
+											}
+											add_institution_embracement = {
+												which = feudalism
+												value = 100
+											}
+										}
+										
+									}
+								}
+								if = {
+									limit = {
 										has_institution = feudalism
 									}
+									capital_scope = {
+										if = {
+											limit = {
+												NOT = {
+													development = 20
+												}
+											}
+											add_institution_embracement = {
+												which = renaissance
+												value = 100
+											}
+										}
+									}
+									
 								}
+								if = {
+									limit = {
+										has_institution = renaissance
+									}
+									capital_scope = {
+										if = {
+											limit = {
+												NOT = {
+													development = 20
+												}
+											}
+											add_institution_embracement = {
+												which = new_world_i
+												value = 100
+											}
+										}
+									}
+								}
+								if = {
+									limit = {
+										has_institution = new_world_i
+									}
+									capital_scope = {
+										if = {
+											limit = {
+												NOT = {
+													development = 20
+												}
+											}
+											add_institution_embracement = {
+												which = printing_press
+												value = 100
+											}
+										}
+									}
+									
+								}
+								if = {
+									limit = {
+										has_institution = printing_press
+									}
+									capital_scope = {
+										if = {
+											limit = {
+												NOT = {
+													development = 20
+												}
+											}
+											add_institution_embracement = {
+												which = global_trade
+												value = 100
+											}
+										}
+									}
+								}
+								if = {
+									limit = {
+										has_institution = global_trade
+									}
+									capital_scope = {
+										if = {
+											limit = {
+												NOT = {
+													development = 20
+												}
+											}
+											add_institution_embracement = {
+												which = manufactories
+												value = 100
+											}
+										}
+									}
+								}
+								if = {
+									limit = {
+										has_institution = manufactories
+									}
+									capital_scope = {
+										if = {
+											limit = {
+												NOT = {
+													development = 20
+												}
+											}
+											add_institution_embracement = {
+												which = enlightenment
+												value = 100
+											}
+										}
+									}
+								}
+							}
+							######## production
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-								capital_scope = {
-									add_institution_embracement = {
-										which = feudalism
-										value = 100
-									}
-								}
-							}
-							if = {
-								limit = {
-									has_institution = feudalism
-								}
-								capital_scope = {
-									add_institution_embracement = {
-										which = renaissance
-										value = 100
-									}
-								}
-								
-							}
-							if = {
-								limit = {
-									has_institution = renaissance
-								}
-								capital_scope = {
-									add_institution_embracement = {
-										which = new_world_i
-										value = 100
-									}
-								}
-								
-							}
-							if = {
-								limit = {
-									has_institution = new_world_i
-								}
-								capital_scope = {
-									add_institution_embracement = {
-										which = printing_press
-										value = 100
-									}
-								}
-								
-							}
-							if = {
-								limit = {
-									has_institution = printing_press
-								}
-								capital_scope = {
-									add_institution_embracement = {
-										which = global_trade
-										value = 100
-									}
-								}
-								
-							}
-							if = {
-								limit = {
-									has_institution = global_trade
-								}
-								capital_scope = {
-									add_institution_embracement = {
-										which = manufactories
-										value = 100
-									}
-								}
-								
-							}
-							if = {
-								limit = {
-									has_institution = manufactories
-								}
-								capital_scope = {
-									add_institution_embracement = {
-										which = enlightenment
-										value = 100
-									}
-								}
-								
-							}
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							############## tax
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							############## manpower
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
 						}
-						######## production
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						############## tax
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						############## manpower
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
 					}
 				}
 			}
@@ -323,7 +370,7 @@ country_event = {
 						AND = {
 							is_year = 1530
 							NOT = {
-								has_institution = colonialism
+								has_institution = new_world_i
 							}
 							NOT = {
 								continent = europe
@@ -373,198 +420,223 @@ country_event = {
 
 				root = {
 					random_owned_province = {
-						limit = {
-							AND = {
-								NOT = {
-									development = 20
-								}
-								OR = {
-									trade_goods = gold
-								}
-							}
-						}
-
-						root = {
-							if = {
-								limit = {
+						if = {
+							limit = {
 									NOT = {
-										has_institution = feudalism
+										development = 20
 									}
-								}
-								prev = {
-									add_institution_embracement = {
-										which = feudalism
-										value = 100
-									}
-								}
+									trade_goods = gold
 							}
+							root = {
+								if = {
+									limit = {
+										NOT = {
+											has_institution = feudalism
+										}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												trade_goods = gold
+										}
+										add_institution_embracement = {
+											which = feudalism
+											value = 100
+										}
+									}
+								}
 							
-							if = {
-								limit = {
-									AND = {
-										has_institution = feudalism
-										NOT = {
+								if = {
+									limit = {
+											has_institution = feudalism
+											NOT = {
+												has_institution = renaissance
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												trade_goods = gold
+										}
+										add_institution_embracement = {
+											which = renaissance
+											value = 100
+										}
+									}
+								}
+
+								if = {
+									limit = {
 											has_institution = renaissance
+											NOT = {
+												has_institution = new_world_i
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												trade_goods = gold
+										}
+										add_institution_embracement = {
+											which = new_world_i
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = renaissance
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = renaissance
-										NOT = {
+								if = {
+									limit = {
 											has_institution = new_world_i
+											NOT = {
+												has_institution = printing_press
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												trade_goods = gold
+										}
+										add_institution_embracement = {
+											which = printing_press
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = new_world_i
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = new_world_i
-										NOT = {
+								if = {
+									limit = {
 											has_institution = printing_press
+											NOT = {
+												has_institution = global_trade
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												trade_goods = gold
+										}
+										add_institution_embracement = {
+											which = global_trade
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = printing_press
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = printing_press
-										NOT = {
+								if = {
+									limit = {
 											has_institution = global_trade
+											NOT = {
+												has_institution = manufactories
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												trade_goods = gold
+										}
+										add_institution_embracement = {
+											which = manufactories
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = global_trade
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = global_trade
-										NOT = {
+								if = {
+									limit = {
 											has_institution = manufactories
+											NOT = {
+												has_institution = enlightenment
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												trade_goods = gold
+										}
+										add_institution_embracement = {
+											which = enlightenment
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = manufactories
-										value = 100
-									}
-								}
 							}
+							######## production
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = manufactories
-										NOT = {
-											has_institution = enlightenment
-										}
-									}
-								}
-								prev = {
-									add_institution_embracement = {
-										which = enlightenment
-										value = 100
-									}
-								}
-							}
-						}
-						
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-						######## production
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+							############## tax
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
 
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
 
-						############## tax
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
 
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
 
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
 
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
 
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
 
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
+							############## manpower
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
 
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
 
-						############## manpower
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
 
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
 
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+						}	
 					}
 				}
 			}
@@ -601,7 +673,7 @@ country_event = {
 						AND = {
 							is_year = 1530
 							NOT = {
-								has_institution = colonialism
+								has_institution = new_world_i
 							}
 							NOT = {
 								continent = europe
@@ -651,213 +723,367 @@ country_event = {
 
 				root = {
 					random_owned_province = {
-						limit = {
-							AND = {
-								NOT = {
-									development = 20
-								}
-								OR = {
-									trade_goods = coal
-									trade_goods = ivory
-									trade_goods = cocoa
-									trade_goods = dyes
-									trade_goods = silk
-									trade_goods = gems
-									trade_goods = paper
-									trade_goods = cloth
-									trade_goods = salt
-									trade_goods = copper
-									trade_goods = iron
-									trade_goods = chinaware
-									trade_goods = spices
-									trade_goods = coffee
-									trade_goods = cotton
-									trade_goods = sugar
-									trade_goods = tobacco
-									trade_goods = glass								}
-							}
-						}
-
-						root = {
-							if = {
-								limit = {
+						if = {
+							limit = {
 									NOT = {
-										has_institution = feudalism
+										development = 20
 									}
-								}
-								prev = {
-									add_institution_embracement = {
-										which = feudalism
-										value = 100
-									}
-								}
+									OR = {
+										trade_goods = coal
+										trade_goods = ivory
+										trade_goods = cocoa
+										trade_goods = dyes
+										trade_goods = silk
+										trade_goods = gems
+										trade_goods = paper
+										trade_goods = cloth
+										trade_goods = salt
+										trade_goods = copper
+										trade_goods = iron
+										trade_goods = chinaware
+										trade_goods = spices
+										trade_goods = coffee
+										trade_goods = cotton
+										trade_goods = sugar
+										trade_goods = tobacco
+										trade_goods = glass								}
 							}
-							
-							if = {
-								limit = {
-									AND = {
-										has_institution = feudalism
+							root = {
+								if = {
+									limit = {
 										NOT = {
+											has_institution = feudalism
+										}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												OR = {
+													trade_goods = coal
+													trade_goods = ivory
+													trade_goods = cocoa
+													trade_goods = dyes
+													trade_goods = silk
+													trade_goods = gems
+													trade_goods = paper
+													trade_goods = cloth
+													trade_goods = salt
+													trade_goods = copper
+													trade_goods = iron
+													trade_goods = chinaware
+													trade_goods = spices
+													trade_goods = coffee
+													trade_goods = cotton
+													trade_goods = sugar
+													trade_goods = tobacco
+													trade_goods = glass								}
+										}
+										add_institution_embracement = {
+											which = feudalism
+											value = 100
+										}
+									}
+								}
+								
+								if = {
+									limit = {
+											has_institution = feudalism
+											NOT = {
+												has_institution = renaissance
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												OR = {
+													trade_goods = coal
+													trade_goods = ivory
+													trade_goods = cocoa
+													trade_goods = dyes
+													trade_goods = silk
+													trade_goods = gems
+													trade_goods = paper
+													trade_goods = cloth
+													trade_goods = salt
+													trade_goods = copper
+													trade_goods = iron
+													trade_goods = chinaware
+													trade_goods = spices
+													trade_goods = coffee
+													trade_goods = cotton
+													trade_goods = sugar
+													trade_goods = tobacco
+													trade_goods = glass								}
+										}
+										add_institution_embracement = {
+											which = renaissance
+											value = 100
+										}
+									}
+								}
+
+								if = {
+									limit = {
 											has_institution = renaissance
+											NOT = {
+												has_institution = new_world_i
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												OR = {
+													trade_goods = coal
+													trade_goods = ivory
+													trade_goods = cocoa
+													trade_goods = dyes
+													trade_goods = silk
+													trade_goods = gems
+													trade_goods = paper
+													trade_goods = cloth
+													trade_goods = salt
+													trade_goods = copper
+													trade_goods = iron
+													trade_goods = chinaware
+													trade_goods = spices
+													trade_goods = coffee
+													trade_goods = cotton
+													trade_goods = sugar
+													trade_goods = tobacco
+													trade_goods = glass								}
+										}
+										add_institution_embracement = {
+											which = new_world_i
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = renaissance
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = renaissance
-										NOT = {
+								if = {
+									limit = {
 											has_institution = new_world_i
+											NOT = {
+												has_institution = printing_press
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												OR = {
+													trade_goods = coal
+													trade_goods = ivory
+													trade_goods = cocoa
+													trade_goods = dyes
+													trade_goods = silk
+													trade_goods = gems
+													trade_goods = paper
+													trade_goods = cloth
+													trade_goods = salt
+													trade_goods = copper
+													trade_goods = iron
+													trade_goods = chinaware
+													trade_goods = spices
+													trade_goods = coffee
+													trade_goods = cotton
+													trade_goods = sugar
+													trade_goods = tobacco
+													trade_goods = glass								}
+										}
+										add_institution_embracement = {
+											which = printing_press
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = new_world_i
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = new_world_i
-										NOT = {
+								if = {
+									limit = {
 											has_institution = printing_press
+											NOT = {
+												has_institution = global_trade
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												OR = {
+													trade_goods = coal
+													trade_goods = ivory
+													trade_goods = cocoa
+													trade_goods = dyes
+													trade_goods = silk
+													trade_goods = gems
+													trade_goods = paper
+													trade_goods = cloth
+													trade_goods = salt
+													trade_goods = copper
+													trade_goods = iron
+													trade_goods = chinaware
+													trade_goods = spices
+													trade_goods = coffee
+													trade_goods = cotton
+													trade_goods = sugar
+													trade_goods = tobacco
+													trade_goods = glass								}
+										}
+										add_institution_embracement = {
+											which = global_trade
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = printing_press
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = printing_press
-										NOT = {
+								if = {
+									limit = {
 											has_institution = global_trade
+											NOT = {
+												has_institution = manufactories
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												OR = {
+													trade_goods = coal
+													trade_goods = ivory
+													trade_goods = cocoa
+													trade_goods = dyes
+													trade_goods = silk
+													trade_goods = gems
+													trade_goods = paper
+													trade_goods = cloth
+													trade_goods = salt
+													trade_goods = copper
+													trade_goods = iron
+													trade_goods = chinaware
+													trade_goods = spices
+													trade_goods = coffee
+													trade_goods = cotton
+													trade_goods = sugar
+													trade_goods = tobacco
+													trade_goods = glass								}
+										}
+										add_institution_embracement = {
+											which = manufactories
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = global_trade
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = global_trade
-										NOT = {
+								if = {
+									limit = {
 											has_institution = manufactories
+											NOT = {
+												has_institution = enlightenment
+											}
+									}
+									random_owned_province = {
+										limit = {
+												NOT = {
+													development = 20
+												}
+												OR = {
+													trade_goods = coal
+													trade_goods = ivory
+													trade_goods = cocoa
+													trade_goods = dyes
+													trade_goods = silk
+													trade_goods = gems
+													trade_goods = paper
+													trade_goods = cloth
+													trade_goods = salt
+													trade_goods = copper
+													trade_goods = iron
+													trade_goods = chinaware
+													trade_goods = spices
+													trade_goods = coffee
+													trade_goods = cotton
+													trade_goods = sugar
+													trade_goods = tobacco
+													trade_goods = glass								}
+										}
+										add_institution_embracement = {
+											which = enlightenment
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = manufactories
-										value = 100
-									}
-								}
 							}
+							######## production
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = manufactories
-										NOT = {
-											has_institution = enlightenment
-										}
-									}
-								}
-								prev = {
-									add_institution_embracement = {
-										which = enlightenment
-										value = 100
-									}
-								}
-							}
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							############## tax
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							############## manpower
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
 						}
-
-						######## production
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						############## tax
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						############## manpower
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
 					}
 				}
 			}
@@ -944,217 +1170,236 @@ country_event = {
 
 				root = {
 					random_owned_province = {
-						limit = {
-								NOT = {
-									development = 15
-								}
-							
-						}
-
-						root = {
-							if = {
-								limit = {
+						if = {
+							limit = {
 									NOT = {
-										has_institution = feudalism
+										development = 15
 									}
-								}
-								prev = {
-									add_institution_embracement = {
-										which = feudalism
-										value = 100
-									}
-								}
 							}
-							
-							if = {
-								limit = {
-									AND = {
-										has_institution = feudalism
+							root = {
+								if = {
+									limit = {
 										NOT = {
+											has_institution = feudalism
+										}
+									}
+									random_owned_province = {
+										limit = {
+											NOT = {
+												development = 15
+											}
+										}
+										add_institution_embracement = {
+											which = feudalism
+											value = 100
+										}
+									}
+								}
+								
+								if = {
+									limit = {
+											has_institution = feudalism
+											NOT = {
+												has_institution = renaissance
+											}
+									}
+									random_owned_province = {
+										limit = {
+											NOT = {
+												development = 15
+											}
+										}
+										add_institution_embracement = {
+											which = renaissance
+											value = 100
+										}
+									}
+								}
+
+								if = {
+									limit = {
 											has_institution = renaissance
+											NOT = {
+												has_institution = new_world_i
+											}
+									}
+									random_owned_province = {
+										limit = {
+											NOT = {
+												development = 15
+											}
+										}
+										add_institution_embracement = {
+											which = new_world_i
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = renaissance
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = renaissance
-										NOT = {
+								if = {
+									limit = {
 											has_institution = new_world_i
+											NOT = {
+												has_institution = printing_press
+											}
+									}
+									random_owned_province = {
+										limit = {
+											NOT = {
+												development = 15
+											}
+										}
+										add_institution_embracement = {
+											which = printing_press
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = new_world_i
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = new_world_i
-										NOT = {
+								if = {
+									limit = {
 											has_institution = printing_press
+											NOT = {
+												has_institution = global_trade
+											}
+									}
+									random_owned_province = {
+										limit = {
+											NOT = {
+												development = 15
+											}
+										}
+										add_institution_embracement = {
+											which = global_trade
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = printing_press
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = printing_press
-										NOT = {
+								if = {
+									limit = {
 											has_institution = global_trade
+											NOT = {
+												has_institution = manufactories
+											}
+									}
+									random_owned_province = {
+										limit = {
+											NOT = {
+												development = 15
+											}
+										}
+										add_institution_embracement = {
+											which = manufactories
+											value = 100
 										}
 									}
 								}
-								prev = {
-									add_institution_embracement = {
-										which = global_trade
-										value = 100
-									}
-								}
-							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = global_trade
-										NOT = {
+								if = {
+									limit = {
 											has_institution = manufactories
-										}
+											NOT = {
+												has_institution = enlightenment
+											}
 									}
-								}
-								prev = {
-									add_institution_embracement = {
-										which = manufactories
-										value = 100
+									random_owned_province = {
+										limit = {
+											NOT = {
+												development = 15
+											}
+										}
+										add_institution_embracement = {
+											which = enlightenment
+											value = 100
+										}
 									}
 								}
 							}
 
-							if = {
-								limit = {
-									AND = {
-										has_institution = manufactories
-										NOT = {
-											has_institution = enlightenment
-										}
-									}
-								}
-								prev = {
-									add_institution_embracement = {
-										which = enlightenment
-										value = 100
-									}
-								}
-							}
+							######## production
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							add_base_production = 1
+							add_scaled_local_dip_power = -10
+
+							############## tax
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							add_base_tax = 1
+							add_scaled_local_adm_power = -10
+
+							############## manpower
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
+
+							add_base_manpower = 1
+							add_scaled_local_mil_power = -10
 						}
-
-						######## production
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						add_base_production = 1
-						add_scaled_local_dip_power = -10
-
-						############## tax
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						add_base_tax = 1
-						add_scaled_local_adm_power = -10
-
-						############## manpower
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
-
-						add_base_manpower = 1
-						add_scaled_local_mil_power = -10
 					}
 				}
 			}
 
 			if = {
 				limit = {
-					AND = {
 						root = {
 							dip_power = 950
 						}
 						NOT = {
 		        			is_year = 1700
 		        		}
-					}
 				}
 				root = {
 					random_owned_province = {
 						limit = {
-							AND = {
 								NOT = {
 									base_production = 15
 								}
 								trade_goods = gold
-							}
 						}
 						add_base_production = 1
 						add_scaled_local_dip_power = -10
@@ -1172,7 +1417,6 @@ country_event = {
 				root = {
 					random_owned_province = {
 						limit = {
-							AND = {
 								NOT = {
 									development = 20
 								}
@@ -1196,7 +1440,6 @@ country_event = {
 									trade_goods = tobacco
 									trade_goods = glass
 								}
-							}
 						}
 						add_base_production = 1
 						add_scaled_local_dip_power = -10
@@ -1211,7 +1454,6 @@ country_event = {
 				root = {
 					random_owned_province = {
 						limit = {
-							AND = {
 								NOT = {
 									development = 20
 								}
@@ -1228,7 +1470,6 @@ country_event = {
 									trade_goods = tea
 									trade_goods = tropical_wood
 								}
-							}
 						}
 						add_base_manpower = 1
 						add_scaled_local_mil_power = -10
@@ -1238,12 +1479,10 @@ country_event = {
 
 			if = {
 				limit = {
-					AND = {
 						adm_power = 950
 						NOT = {
 							stability = 2
 						}
-					}
 				}
 				add_stability = 1
 				add_adm_power = -150
@@ -1251,10 +1490,8 @@ country_event = {
 
 			if = {
 				limit = {
-					AND = {
 						adm_power = 950
 						inflation = 4
-					}
 				}
 				add_inflation = -2
 				add_adm_power = -75
@@ -1262,20 +1499,16 @@ country_event = {
 
 			if = {
 				limit = {
-					AND = {
 						adm_power = 950
-					}
 				}
 				root = {
 					random_owned_province = {
 						limit = {
-							AND = {
 								NOT = {
 									development = 20
 								}
 								has_owner_accepted_culture = yes
 								has_owner_religion = yes
-							}
 						}
 						add_base_tax = 1
 						add_scaled_local_adm_power = -10
@@ -1285,19 +1518,15 @@ country_event = {
 
 			if = {
 				limit = {
-					AND = {
 						adm_power = 950
-					}
 				}
 				root = {
 					random_owned_province = {
 						limit = {
-							AND = {
 								NOT = {
 									development = 20
 								}
 								has_owner_accepted_culture = yes
-							}
 						}
 						add_base_tax = 1
 						add_scaled_local_adm_power = -10
@@ -1307,19 +1536,15 @@ country_event = {
 
 			if = {
 				limit = {
-					AND = {
 						adm_power = 950
-					}
 				}
 				root = {
 					random_owned_province = {
 						limit = {
-							AND = {
 								NOT = {
 									development = 20
 								}
 								has_owner_religion = yes
-							}
 						}
 						add_base_tax = 1
 						add_scaled_local_adm_power = -10
