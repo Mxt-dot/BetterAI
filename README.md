@@ -25,13 +25,13 @@ There are modifications done for the defines but also the AI_army script for war
 - AI_army script bugfix
 - make AI upgrade forts when it's time to do so!
 <h1>CURRENTLY ON TODO-LIST (recommendations welcome)</h1>
-* War logic
 
-    * properly assigning edicts at war
-    * AI is not ruthless enough is hunting down enemy armies and does not lock down a region as desired
-    * AI should avoid attrition (ever seen a 1.3m forcelimit ottomans navigating? With this mod you will)
-    * reduce mindless mercspam (smarter province choice?)
-    * make england/GB and naval invasions overall useful again
+* War logic
+  * properly assigning edicts at war
+  * AI is not ruthless enough is hunting down enemy armies and does not lock down a region as desired
+  * AI should avoid attrition (ever seen a 1.3m forcelimit ottomans navigating? With this mod you will)
+  * reduce mindless mercspam (smarter province choice?)
+  * make england/GB and naval invasions overall useful again
 
 * Infrastructure logic
   * missionaries still not assigned when budget is low
