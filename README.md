@@ -43,7 +43,7 @@ There are modifications done for the defines but also the AI_army script for war
   * push natives to complete their religion minigame before they get slaughtered
 
 <h1>ISSUES</h1>
-- AI peacing out too quickly when sieged by rebels/capital gets sieged ([b]probably fixed right now, will look into depending on feedback to further tweak values[/b])
+- AI peacing out too quickly when sieged by rebels/capital gets sieged (probably fixed right now, will look into depending on feedback to further tweak values)
 
 __________________________________________________________________
 SOME OF THESE THINGS WON'T HAVE A FIX AT ALL, BUT I TRY! :) 
