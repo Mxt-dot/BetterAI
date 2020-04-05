@@ -33,6 +33,7 @@ country_event = {
         root = {
         		OR = {
         			AND = {
+						primitives = no
 						adm_power = 500
 						dip_power = 600
 						mil_power = 400
@@ -52,336 +53,202 @@ country_event = {
 			####################################################### doesnt have institution until 30 years after spawn outside of europe and has devable capital
 			if = {
 				limit = {
+					primitives = no
+					adm_power = 500
+					dip_power = 600
+					mil_power = 400
+					calc_true_if = {
+						capital_scope = {
+							NOT = {
+								development = 20
+							}
+						}
+						amount = 1
+					}
 					OR = {
 						AND = {
 							is_year = 1465
 							NOT = {
 								has_institution = feudalism
 							}
-							primitives = no
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
 							is_year = 1485
-							has_institution = feudalism
 							NOT = {
 								has_institution = renaissance
 							}
-							primitives = no
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
-							is_year = 1530
+							is_year = 1535
 							NOT = {
 								has_institution = new_world_i
 							}
-							primitives = no
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
-							is_year = 1580
+							is_year = 1585
 							NOT = {
 								has_institution = printing_press
 							}
-							primitives = no
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
-							is_year = 1630
+							is_year = 1635
 							NOT = {
 								has_institution = global_trade
 							}
-							primitives = no
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
-							is_year = 1680
+							is_year = 1685
 							NOT = {
 								has_institution = manufactories
 							}
-							primitives = no
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 					}
 					
 				}
-				root = {
-					if = {
-						limit = {
-							primitives = no
-							NOT = {
-								has_institution = feudalism
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
-						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = feudalism
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
-							}
-						}
-					}
-					if = {
-						limit = {
-							primitives = no
+				if = {
+					limit = {
+						NOT = {
 							has_institution = feudalism
-							NOT = {
-								has_institution = renaissance
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
 						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = renaissance
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
-							}
-						}
-						
 					}
-					if = {
-						limit = {
-							primitives = no
+					capital_scope = {
+						add_institution_embracement = {
+							which = feudalism
+							value = 100
+						}
+						add_base_tax = 7
+						add_base_production = 8
+						add_base_manpower = 6
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -600
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
 							has_institution = renaissance
-							NOT = {
-								has_institution = new_world_i
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
-						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = new_world_i
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
-							}
 						}
 					}
-					if = {
-						limit = {
-							primitives = no
+					capital_scope = {
+						add_institution_embracement = {
+							which = renaissance
+							value = 100
+						}
+						add_base_tax = 7
+						add_base_production = 8
+						add_base_manpower = 6
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -600
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
 							has_institution = new_world_i
-							NOT = {
-								has_institution = printing_press
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
-						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = printing_press
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
-							}
 						}
 					}
-					if = {
-						limit = {
-							primitives = no
+					capital_scope = {
+						add_institution_embracement = {
+							which = new_world_i
+							value = 100
+						}
+						add_base_tax = 7
+						add_base_production = 8
+						add_base_manpower = 6
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -600
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
 							has_institution = printing_press
-							NOT = {
-								has_institution = global_trade
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
-						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = global_trade
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
-							}
 						}
 					}
-					if = {
-						limit = {
-							primitives = no
+					capital_scope = {
+						add_institution_embracement = {
+							which = printing_press
+							value = 100
+						}
+						add_base_tax = 7
+						add_base_production = 8
+						add_base_manpower = 6
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -600
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
 							has_institution = global_trade
-							NOT = {
-								has_institution = manufactories
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
-						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = manufactories
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
-							}
 						}
 					}
-					if = {
-						limit = {
-							primitives = no
-							has_institution = manufactories
-							NOT = {
-								has_institution = enlightenment
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
+					capital_scope = {
+						add_institution_embracement = {
+							which = global_trade
+							value = 100
 						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = enlightenment
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
-							}
+						add_base_tax = 7
+						add_base_production = 8
+						add_base_manpower = 6
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -600
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_institution = manufactories
+						}
+					}
+					capital_scope = {
+						add_institution_embracement = {
+							which = manufactories
+							value = 100
+						}
+						add_base_tax = 7
+						add_base_production = 8
+						add_base_manpower = 6
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -600
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_institution = enlightenment
+						}
+					}
+					capital_scope = {
+						add_institution_embracement = {
+							which = enlightenment
+							value = 100
+						}
+						add_base_tax = 7
+						add_base_production = 8
+						add_base_manpower = 6
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -600
 						}
 					}
 				}
