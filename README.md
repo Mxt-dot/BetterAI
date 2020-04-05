@@ -26,19 +26,22 @@ There are modifications done for the defines but also the AI_army script for war
 - make AI upgrade forts when it's time to do so!
 <h1>CURRENTLY ON TODO-LIST (recommendations welcome)</h1>
 * War logic
+
     * properly assigning edicts at war
     * AI is not ruthless enough is hunting down enemy armies and does not lock down a region as desired
     * AI should avoid attrition (ever seen a 1.3m forcelimit ottomans navigating? With this mod you will)
     * reduce mindless mercspam (smarter province choice?)
     * make england/GB and naval invasions overall useful again
+
 * Infrastructure logic
-    * missionaries still not assigned when budget is low
-    * AI upgrading their forts when a new level is available
+  * missionaries still not assigned when budget is low
+  * AI upgrading their forts when a new level is available
 * Overall
-    * AI alliance evaluation is not satisfying enough
-    * use estates for power (could be an ai-event every 20 years for ~100 monarch points each)
-    * properly calculate dev cost. Currently it's just an estimate based on the amount of base_tax/production/manpower the province has, meaning base-to-dev * 10 is the cost.
-    * push natives to complete their religion minigame before they get slaughtered
+  * AI alliance evaluation is not satisfying enough
+  * use estates for power (could be an ai-event every 20 years for ~100 monarch points each)
+  * properly calculate dev cost. Currently it's just an estimate based on the amount of base_tax/production/manpower the province has, meaning base-to-dev * 10 is the cost.
+  * push natives to complete their religion minigame before they get slaughtered
+
 <h1>ISSUES</h1>
 - AI peacing out too quickly when sieged by rebels/capital gets sieged ([b]probably fixed right now, will look into depending on feedback to further tweak values[/b])
 
