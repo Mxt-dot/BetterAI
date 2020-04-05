@@ -1,9 +1,11 @@
 Europa Universalis 4 MOD
 
 <h2>DISCLAIMER</h2>
+
 **THIS MOD IS WORK IN PROGRESS. IT COULD WORK, IT COULD COMPLETELY BREAK, IT COULD HAVE NO FUNCTIONALITY. IT'S BASICALLY AN ALPHA VERSION CURRENTLY.**
-<h1>What is this mod?<h1>
+<h1>What is this mod?</h1>
 This mod is an enhancement of existing  AI tweaking mods. Thanks to all already existing AI mods for inspiration.
+
 **PLAY THIS GAME ON HARD.**
 <h1> So... what's the actual content?</h1>
 <h3>Difficulty</h3>
