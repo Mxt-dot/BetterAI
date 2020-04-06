@@ -42,6 +42,7 @@ country_event = {
 			mil_power = 950
 		}
 	}
+	
 	mean_time_to_happen = {
 		months = 1
 	}
@@ -102,8 +103,8 @@ country_event = {
 							}
 						}
 					}
-					
 				}
+				
 				if = {
 					limit = {
 						NOT = {
@@ -111,18 +112,18 @@ country_event = {
 						}
 					}
 					capital_scope = {
-							add_institution_embracement = {
-								which = feudalism
-								value = 100
-							}
-							add_base_production = 8
-							add_base_tax = 7
-							add_base_manpower = 5
-							root = {
-								add_adm_power = -700
-								add_dip_power = -800
-								add_mil_power = -500
-							}
+						add_institution_embracement = {
+							which = feudalism
+							value = 100
+						}
+						add_base_production = 8
+						add_base_tax = 7
+						add_base_manpower = 5
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -500
+						}
 					}
 				}
 				if = {
@@ -133,18 +134,18 @@ country_event = {
 						}
 					}
 					capital_scope = {
-							add_institution_embracement = {
-								which = renaissance
-								value = 100
-							}
-							add_base_production = 8
-							add_base_tax = 7
-							add_base_manpower = 5
-							root = {
-								add_adm_power = -700
-								add_dip_power = -800
-								add_mil_power = -500
-							}
+						add_institution_embracement = {
+							which = renaissance
+							value = 100
+						}
+						add_base_production = 8
+						add_base_tax = 7
+						add_base_manpower = 5
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -500
+						}
 					}
 					
 				}
@@ -156,18 +157,18 @@ country_event = {
 						}
 					}
 					capital_scope = {
-							add_institution_embracement = {
-								which = new_world_i
-								value = 100
-							}
-							add_base_production = 8
-							add_base_tax = 7
-							add_base_manpower = 5
-							root = {
-								add_adm_power = -700
-								add_dip_power = -800
-								add_mil_power = -500
-							}
+						add_institution_embracement = {
+							which = new_world_i
+							value = 100
+						}
+						add_base_production = 8
+						add_base_tax = 7
+						add_base_manpower = 5
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -500
+						}
 					}
 				}
 				if = {
@@ -178,18 +179,18 @@ country_event = {
 						}
 					}
 					capital_scope = {
-							add_institution_embracement = {
-								which = printing_press
-								value = 100
-							}
-							add_base_production = 8
-							add_base_tax = 7
-							add_base_manpower = 5
-							root = {
-								add_adm_power = -700
-								add_dip_power = -800
-								add_mil_power = -500
-							}
+						add_institution_embracement = {
+							which = printing_press
+							value = 100
+						}
+						add_base_production = 8
+						add_base_tax = 7
+						add_base_manpower = 5
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -500
+						}
 					}
 				}
 				if = {
@@ -200,18 +201,18 @@ country_event = {
 						}
 					}
 					capital_scope = {
-							add_institution_embracement = {
-								which = global_trade
-								value = 100
-							}
-							add_base_production = 8
-							add_base_tax = 7
-							add_base_manpower = 5
-							root = {
-								add_adm_power = -700
-								add_dip_power = -800
-								add_mil_power = -500
-							}
+						add_institution_embracement = {
+							which = global_trade
+							value = 100
+						}
+						add_base_production = 8
+						add_base_tax = 7
+						add_base_manpower = 5
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -500
+						}
 					}
 				}
 				if = {
@@ -222,18 +223,18 @@ country_event = {
 						}
 					}
 					capital_scope = {
-							add_institution_embracement = {
-								which = manufactories
-								value = 100
-							}
-							add_base_production = 8
-							add_base_tax = 7
-							add_base_manpower = 5
-							root = {
-								add_adm_power = -700
-								add_dip_power = -800
-								add_mil_power = -500
-							}
+						add_institution_embracement = {
+							which = manufactories
+							value = 100
+						}
+						add_base_production = 8
+						add_base_tax = 7
+						add_base_manpower = 5
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -500
+						}
 					}
 				}
 				if = {
@@ -244,18 +245,18 @@ country_event = {
 						}
 					}
 					capital_scope = {
-							add_institution_embracement = {
-								which = enlightenment
-								value = 100
-							}
-							add_base_production = 8
-							add_base_tax = 7
-							add_base_manpower = 5
-							root = {
-								add_adm_power = -700
-								add_dip_power = -800
-								add_mil_power = -500
-							}
+						add_institution_embracement = {
+							which = enlightenment
+							value = 100
+						}
+						add_base_production = 8
+						add_base_tax = 7
+						add_base_manpower = 5
+						root = {
+							add_adm_power = -700
+							add_dip_power = -800
+							add_mil_power = -500
+						}
 					}
 				}
 			}
