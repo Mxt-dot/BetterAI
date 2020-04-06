@@ -30,7 +30,6 @@ country_event = {
 
 	trigger = {
         ai = yes
-        root = {
         		OR = {
         			AND = {
 						adm_power = 500
@@ -41,7 +40,6 @@ country_event = {
         			dip_power = 950
 		            mil_power = 950
         		}
-        }
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -117,7 +115,6 @@ country_event = {
 					}
 					
 				}
-				root = {
 					if = {
 						limit = {
 							primitives = no
@@ -384,7 +381,6 @@ country_event = {
 							}
 						}
 					}
-				}
 			}
 
 			############################################# doesnt have institution until 30 years after spawn outside of europe and DOESNT HAVE devable capital BUT HAS DEVABLE gold province
