@@ -55,6 +55,14 @@ country_event = {
 					adm_power = 500
 					dip_power = 600
 					mil_power = 400
+					calc_true_if = {
+						capital_scope = {
+							NOT = {
+								development = 20
+							}
+						}
+						amount = 1
+					}
 					OR = {
 						AND = {
 							is_year = 1465
@@ -101,14 +109,6 @@ country_event = {
 						NOT = {
 							has_institution = feudalism
 						}
-						calc_true_if = {
-							capital_scope = {
-								NOT = {
-									development = 20
-								}
-							}
-							amount = 1
-						}
 					}
 					capital_scope = {
 						if = {
@@ -137,14 +137,6 @@ country_event = {
 						has_institution = feudalism
 						NOT = {
 							has_institution = renaissance
-						}
-						calc_true_if = {
-							capital_scope = {
-								NOT = {
-									development = 20
-								}
-							}
-							amount = 1
 						}
 					}
 					capital_scope = {
@@ -176,14 +168,6 @@ country_event = {
 						NOT = {
 							has_institution = new_world_i
 						}
-						calc_true_if = {
-							capital_scope = {
-								NOT = {
-									development = 20
-								}
-							}
-							amount = 1
-						}
 					}
 					capital_scope = {
 						if = {
@@ -212,14 +196,6 @@ country_event = {
 						has_institution = new_world_i
 						NOT = {
 							has_institution = printing_press
-						}
-						calc_true_if = {
-							capital_scope = {
-								NOT = {
-									development = 20
-								}
-							}
-							amount = 1
 						}
 					}
 					capital_scope = {
@@ -250,14 +226,6 @@ country_event = {
 						NOT = {
 							has_institution = global_trade
 						}
-						calc_true_if = {
-							capital_scope = {
-								NOT = {
-									development = 20
-								}
-							}
-							amount = 1
-						}
 					}
 					capital_scope = {
 						if = {
@@ -287,14 +255,6 @@ country_event = {
 						NOT = {
 							has_institution = manufactories
 						}
-						calc_true_if = {
-							capital_scope = {
-								NOT = {
-									development = 20
-								}
-							}
-							amount = 1
-						}
 					}
 					capital_scope = {
 						if = {
@@ -323,14 +283,6 @@ country_event = {
 						has_institution = manufactories
 						NOT = {
 							has_institution = enlightenment
-						}
-						calc_true_if = {
-							capital_scope = {
-								NOT = {
-									development = 20
-								}
-							}
-							amount = 1
 						}
 					}
 					capital_scope = {
