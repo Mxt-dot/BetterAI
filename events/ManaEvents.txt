@@ -30,16 +30,16 @@ country_event = {
 
 	trigger = {
         ai = yes
-        		OR = {
-        			AND = {
-						adm_power = 500
-						dip_power = 600
-						mil_power = 400
-        			}
-        			adm_power = 950
-        			dip_power = 950
-		            mil_power = 950
-        		}
+		OR = {
+			AND = {
+				adm_power = 500
+				dip_power = 600
+				mil_power = 400
+			}
+			adm_power = 950
+			dip_power = 950
+			mil_power = 950
+		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -115,272 +115,272 @@ country_event = {
 					}
 					
 				}
-					if = {
-						limit = {
-							primitives = no
-							NOT = {
-								has_institution = feudalism
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
-						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = feudalism
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
-							}
-						}
-					}
-					if = {
-						limit = {
-							primitives = no
+				if = {
+					limit = {
+						primitives = no
+						NOT = {
 							has_institution = feudalism
-							NOT = {
-								has_institution = renaissance
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
 						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
-								}
-								add_institution_embracement = {
-									which = renaissance
-									value = 100
-								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
+						calc_true_if = {
+							capital_scope = {
+								NOT = {
+									development = 20
 								}
 							}
+							amount = 1
 						}
-						
 					}
-					if = {
-						limit = {
-							primitives = no
+					capital_scope = {
+						if = {
+							limit = {
+								NOT = {
+									development = 20
+								}
+							}
+							add_institution_embracement = {
+								which = feudalism
+								value = 100
+							}
+							add_base_production = 8
+							add_base_tax = 7
+							add_base_manpower = 5
+							root = {
+								add_adm_power = -700
+								add_dip_power = -800
+								add_mil_power = -500
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						primitives = no
+						has_institution = feudalism
+						NOT = {
 							has_institution = renaissance
-							NOT = {
-								has_institution = new_world_i
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
 						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
+						calc_true_if = {
+							capital_scope = {
+								NOT = {
+									development = 20
 								}
-								add_institution_embracement = {
-									which = new_world_i
-									value = 100
+							}
+							amount = 1
+						}
+					}
+					capital_scope = {
+						if = {
+							limit = {
+								NOT = {
+									development = 20
 								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
+							}
+							add_institution_embracement = {
+								which = renaissance
+								value = 100
+							}
+							add_base_production = 8
+							add_base_tax = 7
+							add_base_manpower = 5
+							root = {
+								add_adm_power = -700
+								add_dip_power = -800
+								add_mil_power = -500
 							}
 						}
 					}
-					if = {
-						limit = {
-							primitives = no
+					
+				}
+				if = {
+					limit = {
+						primitives = no
+						has_institution = renaissance
+						NOT = {
 							has_institution = new_world_i
-							NOT = {
-								has_institution = printing_press
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
 						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
+						calc_true_if = {
+							capital_scope = {
+								NOT = {
+									development = 20
 								}
-								add_institution_embracement = {
-									which = printing_press
-									value = 100
+							}
+							amount = 1
+						}
+					}
+					capital_scope = {
+						if = {
+							limit = {
+								NOT = {
+									development = 20
 								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
+							}
+							add_institution_embracement = {
+								which = new_world_i
+								value = 100
+							}
+							add_base_production = 8
+							add_base_tax = 7
+							add_base_manpower = 5
+							root = {
+								add_adm_power = -700
+								add_dip_power = -800
+								add_mil_power = -500
 							}
 						}
 					}
-					if = {
-						limit = {
-							primitives = no
+				}
+				if = {
+					limit = {
+						primitives = no
+						has_institution = new_world_i
+						NOT = {
 							has_institution = printing_press
-							NOT = {
-								has_institution = global_trade
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
 						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
+						calc_true_if = {
+							capital_scope = {
+								NOT = {
+									development = 20
 								}
-								add_institution_embracement = {
-									which = global_trade
-									value = 100
+							}
+							amount = 1
+						}
+					}
+					capital_scope = {
+						if = {
+							limit = {
+								NOT = {
+									development = 20
 								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
+							}
+							add_institution_embracement = {
+								which = printing_press
+								value = 100
+							}
+							add_base_production = 8
+							add_base_tax = 7
+							add_base_manpower = 5
+							root = {
+								add_adm_power = -700
+								add_dip_power = -800
+								add_mil_power = -500
 							}
 						}
 					}
-					if = {
-						limit = {
-							primitives = no
+				}
+				if = {
+					limit = {
+						primitives = no
+						has_institution = printing_press
+						NOT = {
 							has_institution = global_trade
-							NOT = {
-								has_institution = manufactories
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
 						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
+						calc_true_if = {
+							capital_scope = {
+								NOT = {
+									development = 20
 								}
-								add_institution_embracement = {
-									which = manufactories
-									value = 100
+							}
+							amount = 1
+						}
+					}
+					capital_scope = {
+						if = {
+							limit = {
+								NOT = {
+									development = 20
 								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
+							}
+							add_institution_embracement = {
+								which = global_trade
+								value = 100
+							}
+							add_base_production = 8
+							add_base_tax = 7
+							add_base_manpower = 5
+							root = {
+								add_adm_power = -700
+								add_dip_power = -800
+								add_mil_power = -500
 							}
 						}
 					}
-					if = {
-						limit = {
-							primitives = no
+				}
+				if = {
+					limit = {
+						primitives = no
+						has_institution = global_trade
+						NOT = {
 							has_institution = manufactories
-							NOT = {
-								has_institution = enlightenment
-							}
-							calc_true_if = {
-								capital_scope = {
-									NOT = {
-										development = 20
-									}
-								}
-								amount = 1
-							}
 						}
-						capital_scope = {
-							if = {
-								limit = {
-									NOT = {
-										development = 20
-									}
+						calc_true_if = {
+							capital_scope = {
+								NOT = {
+									development = 20
 								}
-								add_institution_embracement = {
-									which = enlightenment
-									value = 100
+							}
+							amount = 1
+						}
+					}
+					capital_scope = {
+						if = {
+							limit = {
+								NOT = {
+									development = 20
 								}
-								add_base_production = 8
-								add_base_tax = 7
-								add_base_manpower = 5
-								root = {
-									add_adm_power = -700
-									add_dip_power = -800
-									add_mil_power = -500
-								}
+							}
+							add_institution_embracement = {
+								which = manufactories
+								value = 100
+							}
+							add_base_production = 8
+							add_base_tax = 7
+							add_base_manpower = 5
+							root = {
+								add_adm_power = -700
+								add_dip_power = -800
+								add_mil_power = -500
 							}
 						}
 					}
+				}
+				if = {
+					limit = {
+						primitives = no
+						has_institution = manufactories
+						NOT = {
+							has_institution = enlightenment
+						}
+						calc_true_if = {
+							capital_scope = {
+								NOT = {
+									development = 20
+								}
+							}
+							amount = 1
+						}
+					}
+					capital_scope = {
+						if = {
+							limit = {
+								NOT = {
+									development = 20
+								}
+							}
+							add_institution_embracement = {
+								which = enlightenment
+								value = 100
+							}
+							add_base_production = 8
+							add_base_tax = 7
+							add_base_manpower = 5
+							root = {
+								add_adm_power = -700
+								add_dip_power = -800
+								add_mil_power = -500
+							}
+						}
+					}
+				}
 			}
 
 			############################################# doesnt have institution until 30 years after spawn outside of europe and DOESNT HAVE devable capital BUT HAS DEVABLE gold province
