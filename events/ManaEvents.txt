@@ -73,7 +73,6 @@ country_event = {
 						}
 						AND = {
 							is_year = 1485
-							has_institution = feudalism
 							NOT = {
 								has_institution = renaissance
 							}
@@ -126,9 +125,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_institution = feudalism
 						NOT = {
 							has_institution = renaissance
 						}
@@ -149,9 +147,8 @@ country_event = {
 					}
 					
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_institution = renaissance
 						NOT = {
 							has_institution = new_world_i
 						}
@@ -171,9 +168,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_institution = new_world_i
 						NOT = {
 							has_institution = printing_press
 						}
@@ -193,9 +189,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_institution = printing_press
 						NOT = {
 							has_institution = global_trade
 						}
@@ -215,9 +210,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_institution = global_trade
 						NOT = {
 							has_institution = manufactories
 						}
@@ -237,9 +231,8 @@ country_event = {
 						}
 					}
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_institution = manufactories
 						NOT = {
 							has_institution = enlightenment
 						}
