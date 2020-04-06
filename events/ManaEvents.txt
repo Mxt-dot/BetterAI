@@ -32,6 +32,7 @@ country_event = {
         ai = yes
 		OR = {
 			AND = {
+				primitives = no
 				adm_power = 500
 				dip_power = 600
 				mil_power = 400
@@ -50,13 +51,13 @@ country_event = {
 			####################################################### doesnt have institution until 30 years after spawn outside of europe and has devable capital
 			if = {
 				limit = {
+					primitives = no
 					OR = {
 						AND = {
 							is_year = 1465
 							NOT = {
 								has_institution = feudalism
 							}
-							primitives = no
 							adm_power = 500
 							dip_power = 600
 							mil_power = 400
@@ -67,7 +68,6 @@ country_event = {
 							NOT = {
 								has_institution = renaissance
 							}
-							primitives = no
 							adm_power = 500
 							dip_power = 600
 							mil_power = 400
@@ -77,7 +77,6 @@ country_event = {
 							NOT = {
 								has_institution = new_world_i
 							}
-							primitives = no
 							adm_power = 500
 							dip_power = 600
 							mil_power = 400
@@ -87,7 +86,6 @@ country_event = {
 							NOT = {
 								has_institution = printing_press
 							}
-							primitives = no
 							adm_power = 500
 							dip_power = 600
 							mil_power = 400
@@ -97,7 +95,6 @@ country_event = {
 							NOT = {
 								has_institution = global_trade
 							}
-							primitives = no
 							adm_power = 500
 							dip_power = 600
 							mil_power = 400
@@ -107,7 +104,6 @@ country_event = {
 							NOT = {
 								has_institution = manufactories
 							}
-							primitives = no
 							adm_power = 500
 							dip_power = 600
 							mil_power = 400
@@ -117,7 +113,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						primitives = no
 						NOT = {
 							has_institution = feudalism
 						}
@@ -154,7 +149,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						primitives = no
 						has_institution = feudalism
 						NOT = {
 							has_institution = renaissance
@@ -193,7 +187,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						primitives = no
 						has_institution = renaissance
 						NOT = {
 							has_institution = new_world_i
@@ -231,7 +224,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						primitives = no
 						has_institution = new_world_i
 						NOT = {
 							has_institution = printing_press
@@ -269,7 +261,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						primitives = no
 						has_institution = printing_press
 						NOT = {
 							has_institution = global_trade
@@ -307,7 +298,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						primitives = no
 						has_institution = global_trade
 						NOT = {
 							has_institution = manufactories
@@ -345,7 +335,6 @@ country_event = {
 				}
 				if = {
 					limit = {
-						primitives = no
 						has_institution = manufactories
 						NOT = {
 							has_institution = enlightenment
