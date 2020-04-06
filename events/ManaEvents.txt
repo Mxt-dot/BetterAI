@@ -52,15 +52,15 @@ country_event = {
 			if = {
 				limit = {
 					primitives = no
+					adm_power = 500
+					dip_power = 600
+					mil_power = 400
 					OR = {
 						AND = {
 							is_year = 1465
 							NOT = {
 								has_institution = feudalism
 							}
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
 							is_year = 1485
@@ -68,45 +68,30 @@ country_event = {
 							NOT = {
 								has_institution = renaissance
 							}
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
 							is_year = 1530
 							NOT = {
 								has_institution = new_world_i
 							}
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
 							is_year = 1580
 							NOT = {
 								has_institution = printing_press
 							}
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
 							is_year = 1630
 							NOT = {
 								has_institution = global_trade
 							}
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 						AND = {
 							is_year = 1680
 							NOT = {
 								has_institution = manufactories
 							}
-							adm_power = 500
-							dip_power = 600
-							mil_power = 400
 						}
 					}
 					
