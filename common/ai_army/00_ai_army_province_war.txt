@@ -1,131 +1,17 @@
+# DOESN'T WORK IN ITS CURRENT ITERATION
+
+# Reason for this is that this script, although posted in the dev diary, most probably actually does not posess any functionality.
+# If it does have functionality and you found out how to use it, get in contact with me.
+
 province = {
     war = {
         active = {
             is_at_war = yes
         }
-        eval_add = {
-        	factor = 10000
+        eval_multiply = {
+        	factor = 0.1
         	modifier = {
         		always = yes
-        	}
-        }
-        eval_multiply = {
-            factor = 0.3
-            modifier = {
-                is_in_capital_area = yes
-            }
-        }
-        eval_multiply = {
-        	factor = 0.8
-        	modifier = {
-        		is_state_core = yes
-        	}
-        }
-        eval_multiply = {
-        	factor = 0.7
-        	modifier = {
-        		OR = {
-        			has_building = workshop
-        			has_building = counting_house
-        		}
-        	}
-        }
-        eval_multiply = {
-        	factor = 0.6
-        	modifier = {
-        		OR = {
-        			has_building = farm_estate
-        			has_building = weapons
-        			has_building = textile
-        			has_building = plantations
-        			has_building = tradecompany
-        			has_building = mills
-        			has_building = wharf
-        		}
-        	}
-        }
-        eval_multiply = {
-        	factor = 0.5
-        	modifier = {
-        		has_building = furnace
-        	}
-        }
-        eval_multiply = {
-        	factor = 0.8
-        	modifier = {
-        		accepted_culture = yes
-        	}
-        }
-        eval_multiply = {
-        	factor = 0.8
-        	modifier = {
-        		which = base_production
-        		value = 4
-        	}
-        }
-        eval_multiply = {
-        	factor = 0.8
-        	modifier = {
-        		which = base_manpower
-        		value = 4
-        	}
-        }
-        eval_add = {
-        	factor = -150
-        	modifier = {
-        		OR = {
-        			is_permanent_claim = yes
-					is_claim = yes
-        		}
-        		
-        	}
-        }
-        eval_add = {
-        	factor = -50
-        	modifier = {
-        		is_looted = no
-        	}
-        }
-        eval_add = {
-        	factor = -200
-        	modifier = {
-        		OR = {
-        			trade_goods = sugar
-        			trade_goods = coffee
-        			trade_goods = spices
-        			trade_goods = chinaware
-        			trade_goods = iron
-        			trade_goods = copper
-        			trade_goods = salt
-        		}
-        	}
-        }
-        eval_add = {
-        	factor = -200
-        	modifier = {
-        		OR = {
-        		trade_goods = cotton
-        		trade_goods = cloth
-        		trade_goods = paper
-        		}
-        	}
-        }
-        eval_add = {
-        	factor = -250
-        	modifier = {
-        		OR = {
-	        		trade_goods = gems
-	        		trade_goods = dyes
-	        		trade_goods = cocoa
-	        		trade_goods = ivory
-        		}
-        	}
-        }
-        eval_add = {
-        	factor = -400
-        	modifier = {
-        		trade_goods = coal
-        		trade_goods = gold
         	}
         }
     }
