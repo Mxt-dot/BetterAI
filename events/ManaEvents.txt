@@ -1,25 +1,3 @@
-
-#country_event = {
-	#id = dutch_republic.31
-	#title = dutch_republic.31.t
-	#desc = dutch_republic_31.d
-	#picture = DEBATE_REPUBLICAN_eventPicture
-#
-	#is_triggered_only = yes
-	#hidden = yes
-#
-	#immediate = {
-		#FROM = {
-			#country_event = { id = dutch_republic.32 }
-		#}
-	#}
-#
-	#option = {
-		#name = "dutch_republic.31.a"
-	#}
-#}
-
-
 namespace = manaevent
 
 country_event = {
