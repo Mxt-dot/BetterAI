@@ -1,0 +1,31 @@
+
+namespace = fortevent
+
+country_event = {
+	id = fortevent.1
+	title = "fortevent.1.t"
+	desc = "fortevent.1.d"
+	#hidden = yes
+
+	trigger = {
+		mil_tech = 14
+		NOT = {
+			mil_tech = 19
+		}
+		treasury = 200
+	}
+
+	mean_time_to_happen = {
+		months = 1	
+	}
+
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+
+	option = {
+		name = "fortevent.1.a"
+	}
+}
