@@ -13,8 +13,10 @@ This mod is an enhancement of existing  AI tweaking mods. Thanks to all already 
 This mod is supposed to enhance the behavior of the AI to actually invest in Missionaries, to build more buildings and to wage more wars with the goal of blobbing like a player would. 
 <h3>Buildings</h3>
 Still, a nation is nothing without proper building structure. Therefore the building importance got tweaked a bit to prefer manufactories, workshops, etc. and to give less importance to docks and similar. 
+<h3>Fort upgrades</h3>
+With this mod, the AI is capable of upgrading their forts more consistently when higher military techs are reached. No more level 2 forts in 1700 russia. Of course the AI pays for it aswell, just like the player does.
 <h3>AI mana spending!</h3>
-This current revision also contains improvements to AI mana spending, meaning it will not waste mana when reaching cap but instead try to invest into provinces. (Not sure why this isn't in the basegame).
+This current revision also contains improvements to AI mana spending, meaning it will not waste mana when reaching cap but instead try to invest into provinces. This functionality should be in the basegame!.
 <h3>Devpushing Institutions</h3>
 The AI now is also capable of devpushing institutions in the best provinces it can find, meaning either capital, gold provinces or just provinces with good trade goods. Of course the AI can't do it for free, meaning it spends 2k mana like the player does.
 <h3>AI army behavior</h3>
@@ -22,8 +24,9 @@ There are modifications done for the defines but also the AI_army script for war
 
 **This mod will not do miracles. It will just try to use the tools we have on our disposale.**
 <h1>Just now, I'm working on...</h1>
-- AI_army script bugfix
-- make AI upgrade forts when it's time to do so!
+- AI_army script bugfix (!!! POSTPONED SINCE WAITING ON RESPONSE FROM PARADOX)
+
+- make AI use their missionaries!
 <h1>CURRENTLY ON TODO-LIST (recommendations welcome)</h1>
 
 * War logic
@@ -35,7 +38,6 @@ There are modifications done for the defines but also the AI_army script for war
 
 * Infrastructure logic
   * missionaries still not assigned when budget is low
-  * AI upgrading their forts when a new level is available
 * Overall
   * AI alliance evaluation is not satisfying enough
   * use estates for power (could be an ai-event every 20 years for ~100 monarch points each)
@@ -43,7 +45,7 @@ There are modifications done for the defines but also the AI_army script for war
   * push natives to complete their religion minigame before they get slaughtered
 
 <h1>ISSUES</h1>
-- AI peacing out too quickly when sieged by rebels/capital gets sieged (probably fixed right now, will look into depending on feedback to further tweak values)
+- None currently
 
 __________________________________________________________________
 SOME OF THESE THINGS WON'T HAVE A FIX AT ALL, BUT I TRY! :) 
