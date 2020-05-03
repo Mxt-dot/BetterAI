@@ -33,6 +33,7 @@ country_event = {
 				limit = {
 					has_building = fort_15th
 				}
+				remove_building = fort_15th
 				add_building = fort_16th
 			}
 			add_treasury = -200
@@ -76,6 +77,7 @@ country_event = {
 				limit = {
 					has_building = fort_16th
 				}
+				remove_building = fort_16th
 				add_building = fort_17th
 			}
 			add_treasury = -200
@@ -119,6 +121,7 @@ country_event = {
 				limit = {
 					has_building = fort_17th
 				}
+				remove_building = fort_17th
 				add_building = fort_18th
 			}
 			add_treasury = -200
@@ -204,6 +207,7 @@ country_event = {
 							has_building = fort_16th
 						}
 					}
+					remove_building = fort_15th
 					add_building = fort_16th
 				}
 
@@ -216,6 +220,8 @@ country_event = {
 							has_building = fort_17th
 						}
 					}
+					remove_building = fort_15th
+					remove_building = fort_16th
 					add_building = fort_17th
 				}
 
@@ -228,6 +234,9 @@ country_event = {
 							has_building = fort_18th
 						}
 					}
+					remove_building = fort_15th
+					remove_building = fort_16th
+					remove_building = fort_17th
 					add_building = fort_18th
 				}
 			}
