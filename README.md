@@ -1,4 +1,4 @@
-Europa Universalis 4 MOD
+<h1>Europa Universalis 4 MOD</h1>
 
 <h2>DISCLAIMER</h2>
 
