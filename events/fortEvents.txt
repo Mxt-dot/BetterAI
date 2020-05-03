@@ -1,0 +1,250 @@
+
+namespace = fortevent
+
+# build first fort upgrade (level 2 to level 4)
+country_event = {
+	id = fortevent.1
+	title = "fortevent.1.t"
+	desc = "fortevent.1.d"
+	#hidden = yes
+
+	trigger = {
+		ai = yes
+		mil_tech = 14
+		treasury = 200
+		NOT = {
+			num_of_loans = 3
+		}
+		calc_true_if = {
+			all_owned_province = {
+				has_building = fort_15th
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1	
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_building = fort_15th
+				}
+				remove_building = fort_15th
+				add_building = fort_16th
+			}
+			add_treasury = -200
+		}
+	}
+
+	option = {
+		name = "fortevent.1.a"
+	}
+}
+
+#second upgrade (level 4 to 6)
+country_event = {
+	id = fortevent.2
+	title = "fortevent.2.t"
+	desc = "fortevent.2.d"
+	#hidden = yes
+
+	trigger = {
+		ai = yes
+		mil_tech = 19
+		treasury = 200
+		NOT = {
+			num_of_loans = 3
+		}
+		calc_true_if = {
+			all_owned_province = {
+				has_building = fort_16th
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1	
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_building = fort_16th
+				}
+				remove_building = fort_16th
+				add_building = fort_17th
+			}
+			add_treasury = -200
+		}
+	}
+
+	option = {
+		name = "fortevent.2.a"
+	}
+}
+
+# third upgrade (level 6 to level 8)
+country_event = {
+	id = fortevent.3
+	title = "fortevent.3.t"
+	desc = "fortevent.3.d"
+	#hidden = yes
+
+	trigger = {
+		ai = yes
+		mil_tech = 24
+		treasury = 200
+		NOT = {
+			num_of_loans = 3
+		}
+		calc_true_if = {
+			all_owned_province = {
+				has_building = fort_17th
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1	
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_building = fort_17th
+				}
+				remove_building = fort_17th
+				add_building = fort_18th
+			}
+			add_treasury = -200
+		}
+	}
+
+	option = {
+		name = "fortevent.3.a"
+	}
+}
+
+#add fort to capital
+country_event = {
+	id = fortevent.4
+	title = "fortevent.4.t"
+	desc = "fortevent.4.d"
+	#hidden = yes
+
+	trigger = {
+		ai = yes
+		treasury = 200
+		NOT = {
+			num_of_loans = 3
+		}
+		calc_true_if = {
+			capital_scope = {
+				OR = {
+					NOT = {
+						has_building = fort_15th
+					}
+					AND = {
+						ROOT = {
+							mil_tech = 14
+						}
+						NOT = {
+							has_building = fort_16th
+						}
+					}
+					AND = {
+						ROOT = {
+							mil_tech = 19
+						}
+						NOT = {
+							has_building = fort_17th
+						}
+					}
+					AND = {
+						ROOT = {
+							mil_tech = 24
+						}
+						NOT = {
+							has_building = fort_18th
+						}
+					}
+				}
+			}
+			amount = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1	
+	}
+
+	immediate = {
+		hidden_effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						NOT = {
+							has_building = fort_15th
+						}
+					}
+					add_building = fort_15th
+				}
+
+				if = {
+					limit = {
+						ROOT = {
+							mil_tech = 14
+						}
+						NOT = {
+							has_building = fort_16th
+						}
+					}
+					remove_building = fort_15th
+					add_building = fort_16th
+				}
+
+				if = {
+					limit = {
+						ROOT = {
+							mil_tech = 149
+						}
+						NOT = {
+							has_building = fort_17th
+						}
+					}
+					remove_building = fort_15th
+					remove_building = fort_16th
+					add_building = fort_17th
+				}
+
+				if = {
+					limit = {
+						ROOT = {
+							mil_tech = 24
+						}
+						NOT = {
+							has_building = fort_18th
+						}
+					}
+					remove_building = fort_15th
+					remove_building = fort_16th
+					remove_building = fort_17th
+					add_building = fort_18th
+				}
+			}
+			add_treasury = -200 # give the AI a discount to not bankrupt them while trying to protect its capital
+		}
+	}
+
+	option = {
+		name = "fortevent.4.a"
+	}
+}
