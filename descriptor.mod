@@ -5,5 +5,5 @@ tags={
 	"Gameplay"
 }
 name="BetterAI"
-supported_version="1.29.5"
+supported_version="1.30.x"
 remote_file_id="2021624153"

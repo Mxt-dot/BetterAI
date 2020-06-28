@@ -23,6 +23,7 @@ The AI now is also capable of devpushing institutions in the best provinces it c
 **This mod will not do miracles. It will just try to use the tools we have on our disposale.**
 <h1>Just now, I'm working on...</h1>
 - AI_army script bugfix (!!! POSTPONED SINCE WAITING ON RESPONSE FROM PARADOX)
+
 - updating mod to properly function in 1.30.X + create heuristics for new meta gameplay
 
 <h2>CURRENTLY ON TODO-LIST (recommendations welcome)</h2>
