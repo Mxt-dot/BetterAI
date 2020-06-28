@@ -38,6 +38,8 @@ The AI now is also capable of devpushing institutions in the best provinces it c
 * Infrastructure logic
   * missionaries still not assigned when budget is low
   * make AI use their missionaries!
+  * AI not/barely using estates
+  
 * Overall
   * AI alliance evaluation is not satisfying enough
   * use estates for power (could be an ai-event every 20 years for ~100 monarch points each)
