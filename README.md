@@ -2,7 +2,7 @@
 
 <h2>DISCLAIMER</h2>
 
-**This mod is work in progress. You are free to use any content from it aslong as you reference this project. I try my best to maintain this project and keep all functionality of the mod up-to-date, though of course some things are bound to break eventually. If you like to contribute or help, contact me or open up some issues/pull requests. **
+**This mod is work in progress. You are free to use any content from it aslong as you reference this project. I try my best to maintain this project and keep all functionality of the mod up-to-date, though of course some things are bound to break eventually. If you like to contribute or help, contact me or open up some issues/pull requests.**
 <h2>What is this mod?</h2>
 This mod is an enhancement of existing  AI tweaking mods. Thanks to all already existing AI mods for inspiration.
 
