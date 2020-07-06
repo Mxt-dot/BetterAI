@@ -191,6 +191,11 @@ country_event = {
 			capital_scope = {
 				if = {
 					limit = {
+						ROOT = {
+							NOT = {
+								mil_tech = 14
+							}
+						}
 						NOT = {
 							has_building = fort_15th
 						}
@@ -214,7 +219,7 @@ country_event = {
 				if = {
 					limit = {
 						ROOT = {
-							mil_tech = 149
+							mil_tech = 19
 						}
 						NOT = {
 							has_building = fort_17th
