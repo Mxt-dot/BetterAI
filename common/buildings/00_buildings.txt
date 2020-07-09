@@ -50,7 +50,7 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 5.0
+		factor = 20.0
 	}
 }
 
@@ -62,7 +62,7 @@ temple = {
 	}
 
 	ai_will_do = {
-		factor = 3.0
+		factor = 15.0
 	}
 }
 
@@ -97,7 +97,7 @@ barracks = {
 #	}
 
 	ai_will_do = {
-		factor = 3.0
+		factor = 35.0
 	}
 }
 
@@ -248,7 +248,7 @@ regimental_camp = {
 #	}
 
 	ai_will_do = {
-		factor = 5.0
+		factor = 15.0
 		modifier = {
 			factor = 215 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
@@ -348,7 +348,7 @@ university = {
 
 	ai_will_do = {
 		# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
-		factor = 3.0
+		factor = 15.0
 		modifier = {
 			factor = 250
 			development = 20
@@ -457,7 +457,7 @@ training_fields = {
 	}
 
 	ai_will_do = {
-		factor = 4.0
+		factor = 20.0
 	}
 }
 
@@ -614,7 +614,7 @@ conscription_center = {
 	}
 
 	ai_will_do = {
-		factor = 5.0
+		factor = 20.0
 		modifier = {
 			factor = 435 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
@@ -694,22 +694,22 @@ wharf = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 1750
+		factor = 1000
 
 		modifier = {
-			factor = 5.0
+			factor = 20.0
 			NOT = { base_production = 6 }
 		}
 		modifier = {
-			factor = 6.0
+			factor = 25.0
 			base_production = 10
 		}
 		modifier = {
-			factor = 7.0
+			factor = 30.0
 			base_production = 15
 		}
 		modifier = {
-			factor = 3
+			factor = 35
 			OR = {
 				has_province_modifier = skanemarket
 				has_province_modifier = comet_ore_modifier
@@ -731,7 +731,7 @@ weapons = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 6.0
+		factor = 25.0
 	}
 }
 
@@ -745,7 +745,7 @@ textile = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 7.0
+		factor = 30.0
 	}
 }
 
@@ -761,7 +761,7 @@ plantations = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 8.0
+		factor = 30.0
 	}
 }
 
@@ -776,7 +776,7 @@ tradecompany = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 7.0
+		factor = 30.0
 	}
 }
 
@@ -789,7 +789,7 @@ farm_estate = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 5.0
+		factor = 25.0
 	}
 }
 
@@ -804,7 +804,7 @@ mills = {
 	onmap = yes
 
 	ai_will_do = {
-		factor = 8.0
+		factor = 30.0
 	}
 }
 
@@ -824,7 +824,7 @@ furnace = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 9.0
+		factor = 100.0
 	}
 }
 
@@ -953,7 +953,7 @@ state_house = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 3.0
+		factor = 25.0
 	}
 }
 

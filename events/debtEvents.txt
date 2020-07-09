@@ -1,0 +1,61 @@
+# ATTENTION; CURRENTLY NOT WORKING, BECAUSE IT IS UNCLEAR HOW MERCENARY COMPANIES CAN BE DELETED. IF YOU HAPPEN TO KNOW, FEEL FREE TO CHANGE IT UP.
+
+namespace debtevent
+
+# gotta make the AI save some money man! Delete those mercs at peace or if you got some reserves man...
+country_event = {
+	id = debtevent.1
+	title = "debtevent.1.t"
+	desc = "debtevent.1.d"
+	hidden = yes
+	
+	trigger = {
+		ai = yes
+		num_of_loans = 2
+		OR = {
+			is_at_war = no
+			AND = {
+				manpower_percentage = 0.3
+				army_size_percentage = 0.6
+			}
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				random_hired_mercenary_company = {
+					limit = {
+						location = {
+							owned_by = ROOT
+						}
+					}
+
+					PREV = {
+						kill_units = {
+							
+						}
+					}
+				}
+			}
+			random_hired_mercenary_company = {
+				limit = {
+					location = {
+						owned_by = ROOT
+					}
+				}
+				kill_units = {
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "debtevent.1.a"
+	}
+}

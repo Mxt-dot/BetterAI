@@ -6,7 +6,7 @@ country_event = {
 	id = fortevent.1
 	title = "fortevent.1.t"
 	desc = "fortevent.1.d"
-	#hidden = yes
+	hidden = yes
 
 	trigger = {
 		ai = yes
