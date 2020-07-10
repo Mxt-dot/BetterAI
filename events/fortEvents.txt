@@ -50,7 +50,7 @@ country_event = {
 	id = fortevent.2
 	title = "fortevent.2.t"
 	desc = "fortevent.2.d"
-	#hidden = yes
+	hidden = yes
 
 	trigger = {
 		ai = yes
@@ -94,7 +94,7 @@ country_event = {
 	id = fortevent.3
 	title = "fortevent.3.t"
 	desc = "fortevent.3.d"
-	#hidden = yes
+	hidden = yes
 
 	trigger = {
 		ai = yes
@@ -138,7 +138,7 @@ country_event = {
 	id = fortevent.4
 	title = "fortevent.4.t"
 	desc = "fortevent.4.d"
-	#hidden = yes
+	hidden = yes
 
 	trigger = {
 		ai = yes
