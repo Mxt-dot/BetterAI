@@ -154,15 +154,25 @@ country_event = {
 					}
 					AND = {
 						ROOT = {
-							mil_tech = 14
-						}
+							AND = {
+								mil_tech = 14
+								NOT = {
+									mil_tech = 19
+								}
+							}
+						}	
 						NOT = {
 							has_building = fort_16th
 						}
 					}
 					AND = {
 						ROOT = {
-							mil_tech = 19
+							AND = {
+								mil_tech = 19
+								NOT = {
+									mil_tech = 24
+								}
+							}		
 						}
 						NOT = {
 							has_building = fort_17th
@@ -206,7 +216,12 @@ country_event = {
 				if = {
 					limit = {
 						ROOT = {
-							mil_tech = 14
+							AND = {
+								mil_tech = 14
+								NOT = {
+									mil_tech = 19
+								}
+							}
 						}
 						NOT = {
 							has_building = fort_16th
@@ -219,7 +234,12 @@ country_event = {
 				if = {
 					limit = {
 						ROOT = {
-							mil_tech = 19
+							AND = {
+								mil_tech = 19
+								NOT = {
+									mil_tech = 24
+								}
+							}
 						}
 						NOT = {
 							has_building = fort_17th
