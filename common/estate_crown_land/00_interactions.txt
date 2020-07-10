@@ -46,7 +46,10 @@ interaction = {
 		modifier = {
 			factor = 0
 			OR = {
-				NOT = { crown_land_share = 20 }
+				AND = {
+					NOT = { crown_land_share = 20 }
+					NOT = { num_of_subjects = 1 }
+				}
 				AND = {
 					is_absolutism_active = yes
 					NOT = { crown_land_share = 40 }
@@ -56,7 +59,10 @@ interaction = {
 		modifier = {
 			factor = 0.5
 			OR = {
-				NOT = { crown_land_share = 25 }
+				AND = {
+					NOT = { crown_land_share = 25 }
+					NOT = { num_of_subjects = 1 }
+				}
 				AND = {
 					is_absolutism_active = yes
 					NOT = { crown_land_share = 40 }
