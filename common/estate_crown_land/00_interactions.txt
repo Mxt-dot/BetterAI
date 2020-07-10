@@ -311,7 +311,7 @@ interaction = {
 		}
 	}
 	ai_will_do = {
-		factor = 50
+		factor = 100
 		modifier = {
 			factor = 0
 			crown_land_share = 30
@@ -481,29 +481,16 @@ interaction = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 50
+			factor = 0
+			AND = {
+				ROOT = {
+					government = theocracy
 				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 40
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			NOT = {
-				estate_loyalty = {
-					estate = all
-					loyalty = 35 # Estate is almost disloyal
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
 				}
 			}
 		}
@@ -512,7 +499,7 @@ interaction = {
 			NOT = {
 				estate_loyalty = {
 					estate = all
-					loyalty = 30 # Estate is basically disloyal
+					loyalty = 50
 				}
 			}
 		}
