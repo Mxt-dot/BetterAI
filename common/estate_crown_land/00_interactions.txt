@@ -47,37 +47,28 @@ interaction = {
 			factor = 0
 			OR = {
 				AND = {
-					NOT = { crown_land_share = 20 }
+					NOT = { crown_land_share = 35 } # prevent AI nations even going near the autonomy-increase modifier. Even worse for nations with subjects. Terrible, terrible.
 					NOT = { num_of_subjects = 1 }
 				}
-				AND = {
-					is_absolutism_active = yes
-					NOT = { crown_land_share = 40 }
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				AND = {
-					NOT = { crown_land_share = 25 }
-					NOT = { num_of_subjects = 1 }
-				}
-				AND = {
-					is_absolutism_active = yes
-					NOT = { crown_land_share = 40 }
-				}
-			}
-		}
-		modifier = {
-			factor = 0.8
-			OR = {
-				NOT = { crown_land_share = 35 }
 				AND = {
 					is_absolutism_active = yes
 					NOT = { crown_land_share = 50 }
 				}
 			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 40 } # prevent AI nations even going near that autonomy-increase modifier. Bad for your health, people.
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			crown_land_share = 40 # just let the AI do it more often, dammit
 		}
 		modifier = {
 			factor = 0
