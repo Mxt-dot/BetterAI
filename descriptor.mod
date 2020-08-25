@@ -5,6 +5,6 @@ tags={
 	"Gameplay"
 }
 name="BetterAI"
+picture="thumbnail.png"
 supported_version="1.30.*"
 remote_file_id="2021624153"
-picture = "thumbnail.png"
