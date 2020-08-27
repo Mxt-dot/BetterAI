@@ -6,6 +6,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2021624153
 <h2>What is this mod?</h2>
 This mod is an enhancement of existing  AI tweaking mods. Thanks to all already existing AI mods for inspiration.
 Special thanks to my dude stackpoint/LoStack for contributing with the devclicker, which actually works way better than what I had before. Perhaps he has some nice contributions on other projects too. https://github.com/stackpoint
+Also thanks to Question, for allowing me to use and tweak the "disband mercs" mod!
 
 **PLAY THIS GAME ON HARD OR VERY HARD TO EXPERIENCE THE BEST AI POSSIBLE**
 <h1> So... what's the actual content?</h1>
