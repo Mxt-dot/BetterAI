@@ -1,3 +1,5 @@
+# disband mercenaries mod taken from Question https://forum.paradoxplaza.com/forum/threads/mercs-reason-for-performance-issues-in-1-30.1402395/
+# so credit goes to him https://forum.paradoxplaza.com/forum/members/question.1438577/
 country_decisions = {
 	disband_mercs = {
 		major = yes
