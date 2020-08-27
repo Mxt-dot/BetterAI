@@ -8,6 +8,7 @@ country_decisions = {
 			any_hired_mercenary_company = {
 				hired_for_months = 2
 			}
+			army_size_percentage = 0.7
 			AND = {
 				manpower_percentage = 0.3
 				OR = {
@@ -23,7 +24,7 @@ country_decisions = {
 			hidden_effect = {
 				random_hired_mercenary_company = {
 					limit = {
-						hired_for_months = 12
+						hired_for_months = 2
 					}
 					disband_mercenary_company = this
 				}
