@@ -6,6 +6,7 @@ country_decisions = {
 			mil_tech = 14
 			treasury = 300
 			monthly_income = 10
+			current_income_balance = 2
 			NOT = {
 				num_of_loans = 3
 			}

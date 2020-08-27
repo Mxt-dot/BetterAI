@@ -1,0 +1,36 @@
+country_decisions = {
+	disband_mercs = {
+		major = yes
+		potential = {
+			is_at_war = no
+			any_hired_mercenary_company = {
+				hired_for_months = 2
+			}
+			AND = {
+				manpower_percentage = 0.3
+				OR = {
+					num_of_loans = 1
+					NOT = {
+						current_income_balance = 1
+					}
+				}
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				random_hired_mercenary_company = {
+					limit = {
+						hired_for_months = 12
+					}
+					disband_mercenary_company = this
+				}
+			}
+			log = disband_mercs.1
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
