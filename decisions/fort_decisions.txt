@@ -1,0 +1,284 @@
+country_decisions = {
+	fort2_click = {
+		major = yes
+		potential = {
+			is_at_war = 0
+			mil_tech = 14
+			treasury = 300
+			monthly_income = 10
+			current_income_balance = 2
+			NOT = {
+				num_of_loans = 3
+			}
+			calc_true_if = {
+				all_owned_province = {
+					is_state_core = THIS
+					has_building = fort_15th
+				}
+				amount = 1
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						is_state_core = THIS
+						has_building = fort_15th
+						NOT = {
+							construction_progress = 0.5
+						}
+					}
+					add_building_construction = {
+						building = fort_16th
+						speed = 1.0
+						cost = 1.0
+					}
+				}
+			}
+			log = "[This.GetName] fortevent.1"
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	fort4_click = {
+		major = yes
+		potential = {
+			is_at_war = no
+			mil_tech = 19
+			treasury = 300
+			current_income_balance = 2
+			monthly_income = 10
+			NOT = {
+				num_of_loans = 3
+			}
+			calc_true_if = {
+				all_owned_province = {
+					is_state_core = THIS
+					has_building = fort_16th
+					
+				}
+				amount = 1
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						is_state_core = THIS
+						has_building = fort_16th
+						NOT = {
+							construction_progress = 0.5
+						}
+					}
+					add_building_construction = {
+						building = fort_17th
+						speed = 1.0
+						cost = 1.0
+					}
+				}
+			}
+			log = "[This.GetName] fortevent.2"
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	fort6_click = {
+		major = yes
+		potential = {
+			is_at_war = no
+			mil_tech = 24
+			treasury = 300
+			current_income_balance = 2
+			monthly_income = 10
+			NOT = {
+				num_of_loans = 3
+			}
+			calc_true_if = {
+				all_owned_province = {
+					is_state_core = THIS
+					has_building = fort_17th
+				}
+				amount = 1
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						is_state_core = THIS
+						has_building = fort_17th
+						NOT = {
+							construction_progress = 0.5
+						}
+					}
+					add_building_construction = {
+						building = fort_18th
+						speed = 1.0
+						cost = 1.0
+					}
+				}
+			}
+			log = "[This.GetName] fortevent.3"
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	fortcapital_click = {
+		major = yes
+		potential = {
+			is_at_war = no
+			treasury = 300
+			current_income_balance = 2
+			monthly_income = 10
+			NOT = {
+				num_of_loans = 3
+			}
+			calc_true_if = {
+				capital_scope = {
+					OR = {
+						NOT = {
+							has_building = fort_15th
+						}
+						NOT = {
+							construction_progress = 0.5
+						}
+						AND = {
+							ROOT = {
+								AND = {
+									mil_tech = 14
+									NOT = {
+										mil_tech = 19
+									}
+								}
+							}	
+							NOT = {
+								has_building = fort_16th
+							}
+						}
+						AND = {
+							ROOT = {
+								AND = {
+									mil_tech = 19
+									NOT = {
+										mil_tech = 24
+									}
+								}		
+							}
+							NOT = {
+								has_building = fort_17th
+							}
+						}
+						AND = {
+							ROOT = {
+								mil_tech = 24
+							}
+							NOT = {
+								has_building = fort_18th
+							}
+						}
+					}
+				}
+				amount = 1
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				capital_scope = {
+					if = {
+						limit = {
+							ROOT = {
+								NOT = {
+									mil_tech = 14
+								}
+							}
+							NOT = {
+								has_building = fort_15th
+							}
+						}
+						add_building_construction = {
+							building = fort_15th
+							speed = 1.0
+							cost = 1.0
+						}
+					}
+	
+					if = {
+						limit = {
+							ROOT = {
+								AND = {
+									mil_tech = 14
+									NOT = {
+										mil_tech = 19
+									}
+								}
+							}
+							NOT = {
+								has_building = fort_16th
+							}
+						}
+						add_building_construction = {
+							building = fort_16th
+							speed = 1.0
+							cost = 1.0
+						}
+					}
+	
+					if = {
+						limit = {
+							ROOT = {
+								AND = {
+									mil_tech = 19
+									NOT = {
+										mil_tech = 24
+									}
+								}
+							}
+							NOT = {
+								has_building = fort_17th
+							}
+						}
+						add_building_construction = {
+							building = fort_17th
+							speed = 1.0
+							cost = 1.0
+						}
+					}
+	
+					if = {
+						limit = {
+							ROOT = {
+								mil_tech = 24
+							}
+							NOT = {
+								has_building = fort_18th
+							}
+						}
+						add_building_construction = {
+							building = fort_18th
+							speed = 1.0
+							cost = 1.0
+						}
+					}
+				}
+			}
+			log = "[This.GetName] fortevent.4"
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
