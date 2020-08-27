@@ -25,6 +25,8 @@ This current revision also contains improvements to AI mana spending, meaning it
 The AI now is also capable of devpushing institutions in the best provinces it can find, meaning either capital, gold provinces or just provinces with good trade goods. Of course the AI can't do it for free, meaning it spends ~2k mana like the player does. (improved by LoStack!)
 <h3>Estates behavior</h3>
 The AI will resort to selling land to estates more often as it is just such a nice income source. Also they will not be super cautious and instead actually USE their estates for points etc. and amass up to 4 privileges at the same time per estate. Fancy and helpful. AI still gathers more crown land when absolutism+ hits. (Though let's be honest, the AI has no idea on how to increase absolutism. Not before, not now.)
+<h3>Disbanding mercs!</h3>
+The AI struggles a lot with debt. One of the reasons is that they pay for mercs beyond necessity. Even the Beta patch 1.30.4 does not completely fix this behavior and takes too long to disband units. With this mod, the AI disband their unnecessary mercs quickly while keeping an eye on a high enough army percentage so it does not become easy prey after disbanding. Reasonable. (contribution by Question!)
 
 **This mod will not do miracles. It will just try to use the tools we have on our disposale.**
 <h1>Just now, I'm working on...</h1>
