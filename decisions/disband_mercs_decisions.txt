@@ -4,22 +4,23 @@ country_decisions = {
 	disband_mercs = {
 		major = yes
 		potential = {
+			ai = yes
 			is_at_war = no
 			any_hired_mercenary_company = {
 				hired_for_months = 2
 			}
-			army_size_percentage = 0.7
-			AND = {
-				manpower_percentage = 0.3
-				OR = {
-					num_of_loans = 1
-					NOT = {
-						current_income_balance = 1
-					}
-				}
-			}
+			army_size_percentage = 0.2
+			manpower = 3
+			# OR = {
+			# 		num_of_loans = 1
+			# 		NOT = {
+			# 			current_income_balance = 1
+			# 		}
+			# 	}
 		}
-
+		allow = {
+			
+		}
 		effect = {
 			hidden_effect = {
 				random_hired_mercenary_company = {
@@ -28,12 +29,65 @@ country_decisions = {
 					}
 					disband_mercenary_company = this
 				}
+				while = {
+					limit = {
+						NOT = {
+							army_size_percentage = 0.5
+						}
+						ROOT = {
+							manpower = 3
+							treasury = 35
+						}
+					}
+					capital_scope = {
+						add_unit_construction = {
+							type = infantry
+							cost = 1.0
+							speed = 0
+							amount = 3
+						}	
+					}
+					add_manpower = -3
+				}
 			}
-			log = disband_mercs.1
+			log = "[This.GetName] disbands mercs"
 		}
 
 		ai_will_do = {
 			factor = 1000
 		}
 	}
+
+	# disbandunstable_mercs = {
+	# 	major = yes
+	# 	potential = {
+	# 		ai = yes
+	# 		is_at_war = no
+	# 		any_hired_mercenary_company = {
+	# 			hired_for_months = 2
+	# 		}
+	# 		NOT = {
+	# 			army_size_percentage = 0.8
+	# 		}
+	# 		manpower_percentage = 0.1
+	# 	}
+	# 	effect = {
+	# 		hidden_effect = {
+	# 			capital_scope = {
+	# 				add_unit_construction = {
+	# 					type = infantry
+	# 					cost = 1.0
+	# 					speed = 1.0
+	# 					amount = 3
+	# 				}	
+	# 			}
+	# 		}
+	# 	}
+	# 	allow = {
+			
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 1000
+	# 	}
+	# }
 }
