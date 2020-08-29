@@ -20,6 +20,8 @@ Ahh the famous debt spiral we got used to from the 1.30.X patch. This mod will m
 Additional fancy bonus is the AI declaring bankruptcy if necessary right after a hefty war in a safely manner to prevent paying back debt endlessly. Not my implementation, but it is more pronounced due to this mod!
 <h3>Fort upgrades</h3>
 With this mod, the AI is capable of upgrading their forts more consistently when higher military techs are reached. No more level 2 forts in 1700 russia. Of course the AI pays for it aswell, just like the player does.
+<h3>AI fills empty areas with forts (ZoC addition)</h3>
+The AI, especially russia and lithuania, doesn't bother adding new forts to its country besides the conquered ones. With this mod, the AI not only upgrades existing forts, but also fill areas where no Zones of Control is present. Lithuania, Russia, Sweden and other large countries therefore cover their country with strategic fort placements while paying attention to optimize placement to keep the number of forts as low as possible.
 <h3>AI mana spending!</h3>
 This current revision also contains improvements to AI mana spending, meaning it will not waste mana when reaching cap but instead try to invest into provinces. This functionality should be in the basegame!. (improved by LoStack)
 <h3>Devpushing Institutions</h3>
@@ -28,10 +30,8 @@ The AI now is also capable of devpushing institutions in the best provinces it c
 The AI will resort to selling land to estates more often as it is just such a nice income source. Also they will not be super cautious and instead actually USE their estates for points etc. and amass up to 4 privileges at the same time per estate. Fancy and helpful. AI still gathers more crown land when absolutism+ hits. (Though let's be honest, the AI has no idea on how to increase absolutism. Not before, not now.)
 <h3>Disbanding mercs!</h3>
 The AI struggles a lot with debt. One of the reasons is that they pay for mercs beyond necessity. Even the Beta patch 1.30.4 does not completely fix this behavior and takes too long to disband units. With this mod, the AI disband their unnecessary mercs quickly while keeping an eye on a high enough army percentage so it does not become easy prey after disbanding. Reasonable. (contribution by Question!)
-
 **This mod will not do miracles. It will just try to use the tools we have on our disposale.**
 <h1>Just now, I'm working on...</h1>
-- implementing merc disbanding mechanic, contribution from Question.
 - tweaking AI behavior to a bit more aware of debt in early game
 <h2>CURRENTLY ON TODO-LIST (recommendations welcome)</h2>
 
@@ -47,7 +47,6 @@ The AI struggles a lot with debt. One of the reasons is that they pay for mercs 
 
 * Overall
   * AI alliance evaluation is not satisfying enough
-  * properly calculate dev cost. Currently it's just an estimate based on the amount of base_tax/production/manpower the province has, meaning base-to-dev * 10 is the cost.
   * push natives to complete their religion minigame before they get slaughtered
   * push AI to end disasters when there is an easy fix (looking at you denmark. You could have just stabbed up twice and everything would have been fine.)
 
