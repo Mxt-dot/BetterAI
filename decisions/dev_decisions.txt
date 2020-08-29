@@ -2,6 +2,7 @@ country_decisions = {
 	adm_click = {
 		major = yes
 		potential = {
+			ai = yes
 			power_tech = {
 				power = adm
 				value = 980
@@ -19,7 +20,7 @@ country_decisions = {
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_tax = 1
-					log = dev_info.1
+					#log = "dev_decision.1"
 				}
 			}
 		}
@@ -31,6 +32,7 @@ country_decisions = {
 	dip_click = {
 		major = yes
 		potential = {
+			ai = yes
 			power_tech = {
 				power = dip
 				value = 980
@@ -51,7 +53,7 @@ country_decisions = {
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_production = 1
-					log = dev_info.2
+					#log = "dev_decision.2"
 				}
 			}
 		}
@@ -63,6 +65,7 @@ country_decisions = {
 	mil_click = {
 		major = yes
 		potential = {
+			ai = yes
 			power_tech = {
 				power = mil
 				value = 980
@@ -80,7 +83,7 @@ country_decisions = {
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_manpower = 1
-					log = dev_info.3
+					#log = "dev_decision.3"
 				}
 			}
 		}
@@ -92,6 +95,7 @@ country_decisions = {
 	spawn_click = {
 		major = yes
 		potential = {
+			ai = yes
 			is_lacking_institutions = yes
 			is_at_war = no
 			primitives = no
