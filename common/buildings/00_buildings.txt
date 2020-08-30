@@ -50,7 +50,7 @@ workshop = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 20.0
+		factor = 80.0
 	}
 }
 
@@ -248,10 +248,13 @@ regimental_camp = {
 #	}
 
 	ai_will_do = {
-		factor = 15.0
+		factor = 12.0
 		modifier = {
 			factor = 215 # Little above build cost
-			FROM = { army_size_percentage = 0.95 }
+			FROM = { 
+				army_size_percentage = 0.95
+				current_income_balance = 15
+			}
 		}
 		modifier = {
 			factor = 4.0

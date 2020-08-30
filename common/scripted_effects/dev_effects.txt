@@ -222,25 +222,190 @@ set_base_target = {
 			is_state_core = owner
 		}
 		
-		set_base_value = {
-			which = baseCost
+		set_variable = { # set the sum of the other two values for the tax
+			which = restTax
+			which = base_production
 		}
-		
-		if = { #dip prefer gold
+		change_variable = {
+			which = restTax
+			which = base_manpower
+		}
+
+		set_variable = { # set the sum of the other two values for the prod
+			which = restProd
+			which = base_tax
+		}
+		change_variable = {
+			which = restProd
+			which = base_manpower
+		}
+
+		set_variable = { # set the sum of the other two values for the manpower
+			which = restMan
+			which = base_tax
+		}
+		change_variable = {
+			which = restMan
+			which = base_production
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_country_flag = adm_flag
+				}
+				NOT = {
+					check_variable = {
+						which = notTax
+						which = bTax
+					}
+				}
+			}
+		}
+		else_if = {
 			limit = {
 				owner = {
 					has_country_flag = dip_flag
 				}
-				trade_goods = gold
-			}
-			owner = {
-				multiply_variable = {
-					which = baseCost
-					value = 1.25
+				NOT = {
+					check_variable = {
+						which = notPro
+						which = bPro
+					}
 				}
 			}
+		}
+		else_if = {
+			limit = {
+				owner = {
+					has_country_flag = mil_flag
+				}
+				NOT = {
+					check_variable = {
+						which = notMan
+						which = bMan
+					}
+				}
+			}
+		}
+		else = {
+			set_base_value = {
+				which = baseCost
+			}
 			
-			if = {
+			if = { #dip prefer gold
+				limit = {
+					owner = {
+						has_country_flag = dip_flag
+					}
+					trade_goods = gold
+				}
+				owner = {
+					multiply_variable = {
+						which = baseCost
+						value = 4
+					}
+				}
+				
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = baseCost
+								which = PREV
+							}
+						}
+					}
+					owner = {
+						set_variable = {
+							which = baseCost
+							which = PREV
+						}
+					}
+					save_event_target_as = $which$
+				}
+				
+				owner = {
+					multiply_variable = {
+						which = baseCost
+						value = 0.25
+					}
+				}
+			}
+			else_if = { #dip prefer gold
+				limit = {
+					owner = {
+						has_country_flag = dip_flag
+					}
+					OR = {
+						trade_goods = cloth
+						trade_goods = salt
+						trade_goods = copper
+						trade_goods = iron
+						trade_goods = ivory
+						trade_goods = chinaware
+						trade_goods = spices
+						trade_goods = cocoa
+						trade_goods = coffee
+						trade_goods = cotton
+						trade_goods = sugar
+						trade_goods = tobacco
+						trade_goods = dyes
+						trade_goods = silk
+						trade_goods = glass
+						trade_goods = paper
+						trade_goods = gems
+						trade_goods = coal
+					}
+				}
+				owner = {
+					multiply_variable = {
+						which = baseCost
+						value = 2
+					}
+				}
+				
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = baseCost
+								which = PREV
+							}
+						}
+					}
+					owner = {
+						set_variable = {
+							which = baseCost
+							which = PREV
+						}
+					}
+					save_event_target_as = $which$
+				}
+				
+				owner = {
+					multiply_variable = {
+						which = baseCost
+						value = 0.5
+					}
+				}
+			}
+			else_if = { #institutions
+				limit = {
+					owner = {
+						has_country_flag = institution_flag
+					}
+					OR = {
+						$base$ = 100
+						NOT = { development = 5 }
+						development = 28
+						has_terrain = glacier
+						has_terrain = desert
+						has_climate = arctic
+					}
+				}
+			}
+			else_if = {
 				limit = {
 					NOT = {
 						check_variable = {
@@ -257,45 +422,6 @@ set_base_target = {
 				}
 				save_event_target_as = $which$
 			}
-			
-			owner = {
-				multiply_variable = {
-					which = baseCost
-					value = 0.8
-				}
-			}
-		}
-		else_if = { #institutions
-			limit = {
-				owner = {
-					has_country_flag = institution_flag
-				}
-				OR = {
-					$base$ = 100
-					NOT = { development = 5 }
-					development = 28
-					has_terrain = glacier
-					has_terrain = desert
-					has_climate = arctic
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					check_variable = {
-						which = baseCost
-						which = PREV
-					}
-				}
-			}
-			owner = {
-				set_variable = {
-					which = baseCost
-					which = PREV
-				}
-			}
-			save_event_target_as = $which$
 		}
 	}
 }
