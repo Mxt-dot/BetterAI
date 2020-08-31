@@ -10,6 +10,7 @@ country_decisions = {
 		}
 		effect = {
 			hidden_effect = {
+				set_country_flag = adm_flag
 				set_base_target = {
 					which = base_target
 					base = adm
@@ -22,6 +23,7 @@ country_decisions = {
 					add_base_tax = 1
 					#log = "dev_decision.1"
 				}
+				clr_country_flag = adm_flag
 			}
 		}
 		ai_will_do = {
@@ -55,6 +57,7 @@ country_decisions = {
 					add_base_production = 1
 					#log = "dev_decision.2"
 				}
+				clr_country_flag = dip_flag
 			}
 		}
 		ai_will_do = {
@@ -73,6 +76,7 @@ country_decisions = {
 		}
 		effect = {
 			hidden_effect = {
+				set_country_flag = mil_flag
 				set_base_target = {
 					which = base_target
 					base = mil
@@ -85,6 +89,7 @@ country_decisions = {
 					add_base_manpower = 1
 					#log = "dev_decision.3"
 				}
+				clr_country_flag = mil_flag
 			}
 		}
 		ai_will_do = {

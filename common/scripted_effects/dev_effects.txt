@@ -256,8 +256,8 @@ set_base_target = {
 				}
 				NOT = {
 					check_variable = {
-						which = notTax
-						which = bTax
+						which = restTax
+						which = base_tax
 					}
 				}
 			}
@@ -269,8 +269,8 @@ set_base_target = {
 				}
 				NOT = {
 					check_variable = {
-						which = notPro
-						which = bPro
+						which = restPro
+						which = base_production
 					}
 				}
 			}
@@ -282,8 +282,8 @@ set_base_target = {
 				}
 				NOT = {
 					check_variable = {
-						which = notMan
-						which = bMan
+						which = restMan
+						which = base_manpower
 					}
 				}
 			}
