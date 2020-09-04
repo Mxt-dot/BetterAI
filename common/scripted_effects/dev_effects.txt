@@ -269,7 +269,7 @@ set_base_target = {
 				}
 				NOT = {
 					check_variable = {
-						which = restPro
+						which = restProd
 						which = base_production
 					}
 				}
