@@ -36,7 +36,7 @@ marketplace = {
 	}
 
 	ai_will_do = {
-		factor = 10.0 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 8.0 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
 	}
 }
 
@@ -71,7 +71,7 @@ temple = {
 	}
 
 	ai_will_do = {
-		factor = 15.0
+		factor = 30.0
 	}
 }
 
@@ -112,7 +112,7 @@ barracks = {
 			FROM  = {
 				OR = {
 					NOT = {
-						manpower_percentage = 5
+						manpower_percentage = 0.50
 					}
 					treasury = 1000
 				}
@@ -486,7 +486,7 @@ training_fields = {
 			FROM = {
 				OR = {
 					NOT = {
-						manpower_percentage = 5
+						manpower_percentage = 0.50
 					}
 					treasury = 1000
 				}

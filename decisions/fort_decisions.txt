@@ -16,7 +16,7 @@ country_decisions = {
 					is_state_core = THIS
 					has_building = fort_15th
 					NOT = {
-						construction_progress = 0.01
+						has_construction = building
 					}
 				}
 				amount = 1
@@ -32,7 +32,7 @@ country_decisions = {
 						is_state_core = THIS
 						has_building = fort_15th
 						NOT = {
-							construction_progress = 0.01
+							has_construction = building
 						}
 					}
 					add_building_construction = {
@@ -67,7 +67,7 @@ country_decisions = {
 					is_state_core = THIS
 					has_building = fort_16th
 					NOT = {
-						construction_progress = 0.01
+						has_construction = building
 					}
 					
 				}
@@ -85,7 +85,7 @@ country_decisions = {
 						is_state_core = THIS
 						has_building = fort_16th
 						NOT = {
-							construction_progress = 0.01
+							has_construction = building
 						}
 					}
 					add_building_construction = {
@@ -120,7 +120,7 @@ country_decisions = {
 					is_state_core = THIS
 					has_building = fort_17th
 					NOT = {
-						construction_progress = 0.01
+						has_construction = building
 					}
 				}
 				amount = 1
@@ -137,7 +137,7 @@ country_decisions = {
 						is_state_core = THIS
 						has_building = fort_17th
 						NOT = {
-							construction_progress = 0.01
+							has_construction = building
 						}
 					}
 					add_building_construction = {
@@ -174,7 +174,7 @@ country_decisions = {
 								has_building = fort_15th
 							}
 							NOT = {
-								construction_progress = 0.01
+								has_construction = building
 							}
 						}
 						
@@ -236,7 +236,7 @@ country_decisions = {
 								has_building = fort_15th
 							}
 							NOT = {
-								construction_progress = 0.01
+								has_construction = building
 							}
 						}
 						add_building_construction = {
@@ -260,7 +260,7 @@ country_decisions = {
 								has_building = fort_16th
 							}
 							NOT = {
-								construction_progress = 0.01
+								has_construction = building
 							}
 						}
 						add_building_construction = {
@@ -284,7 +284,7 @@ country_decisions = {
 								has_building = fort_17th
 							}
 							NOT = {
-								construction_progress = 0.01
+								has_construction = building
 							}
 						}
 						add_building_construction = {
@@ -303,7 +303,7 @@ country_decisions = {
 								has_building = fort_18th
 							}
 							NOT = {
-								construction_progress = 0.01
+								has_construction = building
 							}
 						}
 						add_building_construction = {
@@ -328,11 +328,11 @@ country_decisions = {
 		potential = {
 			ai = yes
 			is_at_war = no
-			treasury = 300
-			current_income_balance = 2
-			monthly_income = 10
+			treasury = 700
+			current_income_balance = 10
+			monthly_income = 20
 			NOT = {
-				num_of_loans = 3
+				num_of_loans = 1
 			}
 			calc_true_if = {
 				all_owned_province = { # check all our provinces
@@ -340,7 +340,7 @@ country_decisions = {
 						fort_level = 1 # which have no fort
 					}
 					NOT = {
-						construction_progress = 0.01 # where nothing is being built in
+						has_construction = building # where nothing is being built in
 					}
 					NOT = {
 						calc_true_if = {
@@ -348,7 +348,7 @@ country_decisions = {
 								calc_true_if = {
 									all_neighbor_province = {
 										fort_level = 1
-										is_core = ROOT
+										owned_by = ROOT
 									}
 									amount = 1
 								}
@@ -357,11 +357,11 @@ country_decisions = {
 										NOT = {
 											fort_level = 1
 										}
-										is_core = ROOT
+										owned_by = ROOT
 										calc_true_if = {
 											all_neighbor_province = {
 												fort_level = 1
-												is_core = ROOT
+												owned_by = ROOT
 											}
 											amount = 1
 										}
@@ -388,7 +388,7 @@ country_decisions = {
 							fort_level = 1 # all our owned provinces with forts
 						}
 						NOT = {
-							construction_progress = 0.01
+							has_construction = building
 						}
 						NOT = {
 							calc_true_if = {
@@ -396,7 +396,7 @@ country_decisions = {
 									calc_true_if = {
 										all_neighbor_province = {
 											fort_level = 1
-											is_core = ROOT
+											owned_by = ROOT
 										}
 										amount = 1
 									}
@@ -405,11 +405,11 @@ country_decisions = {
 											NOT = {
 												fort_level = 1
 											}
-											is_core = ROOT
+											owned_by = ROOT
 											calc_true_if = {
 												all_neighbor_province = {
 													fort_level = 1
-													is_core = ROOT
+													owned_by = ROOT
 												}
 												amount = 1
 											}
@@ -432,6 +432,73 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 400
+		}
+	}
+
+	removeclosefort_click = {
+		major = yes
+		potential = {
+			ai = yes
+			calc_true_if = {
+				all_owned_province = {
+					fort_level = 2
+					calc_true_if = {
+						all_neighbor_province = {
+							fort_level = 2
+							owned_by = ROOT
+						}
+						amount = 1
+					}
+				}
+				amount = 1
+			}
+		}
+
+		effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					fort_level = 2
+					calc_true_if = {
+						all_neighbor_province = {
+							fort_level = 2
+							owned_by = ROOT
+						}
+						amount = 1
+					}
+				}
+				if = {
+					limit = {
+						has_building = fort_15th
+					}
+					remove_building = fort_15th
+				}
+				else_if = {
+					limit = {
+						has_building = fort_16th
+					 }
+					 remove_building = fort_16th
+				}
+				else_if = {
+					limit = {
+						has_building = fort_17th
+					 }
+					 remove_building = fort_17th
+				}
+				else_if = {
+					limit = {
+						has_building = fort_18th
+					 }
+					 remove_building = fort_18th
+				}
+			}
+		}
+
+		allow = {
+			
+		}
+		ai_will_do = {
+			factor = 1000
 		}
 	}
 }

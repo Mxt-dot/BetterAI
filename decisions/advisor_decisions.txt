@@ -1,0 +1,49 @@
+country_decisions = { # the AI staright up re-hires advisors after taking a new loan, because it has money again. Absolutely mental.
+	debt_remove_advisors = {
+		major = yes
+
+		potential = {
+			ai = yes
+			AND = { # otherwise the AI will just re-hire the advisors, despite having 10+ loans and -20 balance. Just like the incompetent ruler they have.
+					adm = 1
+					dip = 1
+					mil = 1
+			}
+			has_advisor = yes
+			NOT = {
+				current_income_balance = 0.1
+			}
+			# NOT = {
+			# 	num_of_loans = 2
+			# }
+			# num_of_loans = 1
+		}
+
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						adm = 1
+					}
+					remove_advisor_by_category = ADM
+				}
+				if = {
+					limit = {
+						dip = 1
+					}
+					remove_advisor_by_category = DIP
+				}
+				if = {
+					limit = {
+						mil = 1
+					}
+					remove_advisor_by_category = MIL
+				}
+			}
+		}
+
+		allow = {
+			
+		}
+	}
+}
