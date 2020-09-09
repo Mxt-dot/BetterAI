@@ -13,41 +13,131 @@ country_event = {
 		NOT = {
 			num_of_loans = 1
 		}
-		treasury = 1000
-		current_income_balance = 50
-		manpower_percentage = 0.3
+		is_at_war = no
+		treasury = 600
+		current_income_balance = 10
+		manpower_percentage = 0.1
 	}
 
+	mean_time_to_happen = {
+		months = 3
+	}
 	immediate = {
 		random_owned_province = {
 			limit = {
-				trade_goods = cloth
-				trade_goods = salt
-				trade_goods = copper
-				trade_goods = iron
-				trade_goods = ivory
-				trade_goods = chinaware
-				trade_goods = spices
-				trade_goods = cocoa
-				trade_goods = coffee
-				trade_goods = cotton
-				trade_goods = sugar
-				trade_goods = tobacco
-				trade_goods = dyes
-				trade_goods = silk
-				trade_goods = glass
-				trade_goods = paper
-				trade_goods = gems
-				
-				can_build = manufactory
+				# OR = {
+
+				# 	trade_goods = cloth
+				# 	trade_goods = salt
+				# 	trade_goods = copper
+				# 	trade_goods = iron
+				# 	trade_goods = ivory
+				# 	trade_goods = chinaware
+				# 	trade_goods = spices
+				# 	trade_goods = cocoa
+				# 	trade_goods = coffee
+				# 	trade_goods = cotton
+				# 	trade_goods = sugar
+				# 	trade_goods = tobacco
+				# 	trade_goods = dyes
+				# 	trade_goods = silk
+				# 	trade_goods = glass
+				# 	trade_goods = paper
+				# 	trade_goods = gems
+				# }
+				OR = {
+					can_build = farm_estate
+					can_build = wharf
+					can_build = weapons
+					can_build = textile
+					can_build = plantations
+					can_build = tradecompany
+					can_build = mills
+					can_build = furnace
+				}
 				NOT = {
 					has_construction = building
 				}
 			}
-			add_building_construction = {
-				building = manufactory
-				speed = 1
-				cost = 1
+			if = {
+				limit = {
+					can_build = farm_estate
+				}
+				add_building_construction = {
+					building = farm_estate
+					speed = 1
+					cost = 1
+				}
+			}
+			if = {
+				limit = {
+					can_build = wharf
+				}
+				add_building_construction = {
+					building = wharf
+					speed = 1
+					cost = 1
+				}
+			}
+			if = {
+				limit = {
+					can_build = weapons
+				}
+				add_building_construction = {
+					building = weapons
+					speed = 1
+					cost = 1
+				}
+			}
+			if = {
+				limit = {
+					can_build = textile
+				}
+				add_building_construction = {
+					building = textile
+					speed = 1
+					cost = 1
+				}
+			}
+			if = {
+				limit = {
+					can_build = plantations
+				}
+				add_building_construction = {
+					building = plantations
+					speed = 1
+					cost = 1
+				}
+			}
+			if = {
+				limit = {
+					can_build = tradecompany
+				}
+				add_building_construction = {
+					building = tradecompany
+					speed = 1
+					cost = 1
+				}
+			}
+			if = {
+				limit = {
+					can_build = mills
+				}
+				add_building_construction = {
+					building = mills
+					speed = 1
+					cost = 1
+				}
+			}
+			if = {
+				limit = {
+					can_build = furnace
+				}
+				add_building_construction = {
+					building = furnace
+					speed = 1
+					cost = 1
+				}
 			}
 		}
 	}
@@ -70,10 +160,10 @@ country_event = {
 		NOT = {
 			num_of_loans = 1
 		}
-		treasury = 1000
-		current_income_balance = 20
+		treasury = 600
+		current_income_balance = 30
 		NOT  ={
-			manpower_percentage = 0.3
+			manpower_percentage = 0.1
 		}
 	}
 
@@ -115,6 +205,150 @@ country_event = {
 		}
 	}
 
+	option = {
+		
+	}
+}
+
+country_event = {
+	# building trigger manpower
+	id = building_events.3
+	title = building_events.3.t
+	desc = building_events.3.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		NOT = {
+			num_of_loans = 1
+		}
+		OR = {
+			AND = {
+				treasury = 200
+				current_income_balance = 8
+				NOT = {
+					current_income_balance = 30
+				}
+			}
+			AND = {
+				treasury = 600
+				current_income_balance = 30
+			}
+		}
+		
+		manpower_percentage = 0.1
+	}
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				OR = {
+					base_production = 3
+					has_manufactory_trigger = yes
+				}
+				
+				can_build = workshop
+				NOT = {
+					has_construction = building
+				}
+			}
+			add_building_construction = {
+				building = workshop
+				speed = 1
+				cost = 1
+			}
+		}
+	}
+	option = {
+		
+	}
+}
+
+country_event = {
+	# building trigger more FL
+	id = building_events.4
+	title = building_events.4.t
+	desc = building_events.4.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		NOT = {
+			num_of_loans = 1
+		}
+		treasury = 500
+		current_income_balance = 25
+		manpower_percentage = 0.1
+		army_size_percentage = 0.60
+		OR = {
+			calc_true_if = {
+				all_enemy_country = {
+					army_strength = {
+						who = ROOT
+						value = 0.85
+					}
+				}
+				amount = 1
+			}
+			calc_true_if = {
+				all_neighbor_country = {
+					NOT = {
+						reverse_has_opinion = {
+							who = ROOT
+							value = 0
+						}
+					}
+					army_strength = {
+						who = ROOT
+						value = 0.7
+					}
+				}
+				amount = 1
+			}
+
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				OR = {
+					can_build = regimental_camp
+					can_build = training_fields
+				}
+				NOT = {
+					has_construction = building
+				}
+			}
+			if = {
+				limit = {
+					can_build = regimental_camp
+					NOT = {
+						can_build = training_fields
+					}
+				}
+				add_building_construction = {
+					building = regimental_camp
+					speed = 1
+					cost = 1
+				}
+			}
+			if = {
+				limit = {
+					can_build = training_fields
+				}
+				add_building_construction = {
+					building = training_fields
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+	}
 	option = {
 		
 	}

@@ -5,7 +5,7 @@ country_decisions = {
 			ai = yes
 			power_tech = {
 				power = adm
-				value = 980
+				value = 950
 			}
 		}
 		effect = {
@@ -37,7 +37,7 @@ country_decisions = {
 			ai = yes
 			power_tech = {
 				power = dip
-				value = 980
+				value = 950
 			}
 		}
 		effect = {
@@ -71,7 +71,7 @@ country_decisions = {
 			ai = yes
 			power_tech = {
 				power = mil
-				value = 980
+				value = 950
 			}
 		}
 		effect = {

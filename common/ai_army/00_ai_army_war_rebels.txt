@@ -1,0 +1,14 @@
+province = {
+    war = {
+        active = {
+            is_at_war = no
+        }
+        eval_multiply = {
+            factor = 0.7
+            modifier = {
+				has_siege = yes
+				owned_by = ROOT
+            }
+        }
+    }
+}

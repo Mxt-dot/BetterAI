@@ -332,7 +332,7 @@ set_base_target = {
 					}
 				}
 			}
-			else_if = { #dip prefer gold
+			else_if = { # dip prefer nice trade goods
 				limit = {
 					owner = {
 						has_country_flag = dip_flag

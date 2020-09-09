@@ -6,10 +6,9 @@ country_decisions = {
 			is_at_war = no
 			mil_tech = 14
 			treasury = 300
-			monthly_income = 10
-			current_income_balance = 2
+			current_income_balance = 20
 			NOT = {
-				num_of_loans = 3
+				num_of_loans = 1
 			}
 			calc_true_if = {
 				all_owned_province = {
@@ -57,10 +56,9 @@ country_decisions = {
 			is_at_war = no
 			mil_tech = 19
 			treasury = 300
-			current_income_balance = 2
-			monthly_income = 10
+			current_income_balance = 20
 			NOT = {
-				num_of_loans = 3
+				num_of_loans = 1
 			}
 			calc_true_if = {
 				all_owned_province = {
@@ -110,10 +108,9 @@ country_decisions = {
 			is_at_war = no
 			mil_tech = 24
 			treasury = 300
-			current_income_balance = 2
-			monthly_income = 10
+			current_income_balance = 20
 			NOT = {
-				num_of_loans = 3
+				num_of_loans = 1
 			}
 			calc_true_if = {
 				all_owned_province = {
@@ -161,15 +158,19 @@ country_decisions = {
 			ai = yes
 			is_at_war = no
 			treasury = 300
-			current_income_balance = 2
-			monthly_income = 10
+			current_income_balance = 10
 			NOT = {
-				num_of_loans = 3
+				num_of_loans = 1
 			}
 			calc_true_if = {
 				capital_scope = {
 					OR = { 
 						AND = {
+							ROOT = {
+								NOT = {
+									mil_tech = 14
+								}
+							}
 							NOT = {
 								has_building = fort_15th
 							}
@@ -191,6 +192,9 @@ country_decisions = {
 							NOT = {
 								has_building = fort_16th
 							}
+							NOT = {
+								has_construction = building
+							}
 						}
 						AND = {
 							ROOT = {
@@ -204,6 +208,9 @@ country_decisions = {
 							NOT = {
 								has_building = fort_17th
 							}
+							NOT = {
+								has_construction = building
+							}
 						}
 						AND = {
 							ROOT = {
@@ -211,6 +218,9 @@ country_decisions = {
 							}
 							NOT = {
 								has_building = fort_18th
+							}
+							NOT = {
+								has_construction = building
 							}
 						}
 					}
@@ -328,9 +338,8 @@ country_decisions = {
 		potential = {
 			ai = yes
 			is_at_war = no
-			treasury = 700
-			current_income_balance = 10
-			monthly_income = 20
+			treasury = 300
+			current_income_balance = 20
 			NOT = {
 				num_of_loans = 1
 			}
