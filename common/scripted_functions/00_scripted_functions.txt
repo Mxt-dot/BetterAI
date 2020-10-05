@@ -27,6 +27,15 @@ can_reduce_inflation = {
 }
 
 can_declare_bankruptcy = {
+	condition = {
+		potential = {
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = bankruptcy_building
+			}
+		}
+	}
 }
 
 can_release_colonial_nation = {
