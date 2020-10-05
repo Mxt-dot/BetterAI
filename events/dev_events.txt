@@ -39,7 +39,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-			log = "==yearly institution counter=="
+			#log = "==yearly institution counter=="
 			
 			set_variable = { which = feudalismNo		value = 0.5 }
 			set_variable = { which = renaissanceNo		value = 0	}
@@ -48,7 +48,7 @@ country_event = {
 			set_variable = { which = globalTradeNo		value = 0	}
 			set_variable = { which = manufactoriesNo	value = 0	}
 			set_variable = { which = enlightenmentNo	value = 0	}
-			log = "feudalismNo [This.feudalismNo.GetValue]"
+			#log = "feudalismNo [This.feudalismNo.GetValue]"
 			
 			export_to_variable = { which = current_year	value = trigger_value:is_year }
 			
@@ -63,7 +63,7 @@ country_event = {
 				MIN_value			  = { which = penalty		value = 0.5 }
 				
 				change_variable = { which = renaissanceNo		which = penalty }
-				log = "renaissanceNo [This.renaissanceNo.GetValue]"
+				#log = "renaissanceNo [This.renaissanceNo.GetValue]"
 			}
 			if = { limit = { is_institution_enabled = new_world_i }
 				if = { limit = { NOT = { check_variable = { which = new_world_i_year value = 1499 } } }
@@ -76,7 +76,7 @@ country_event = {
 				MIN_value			  = { which = penalty		value = 0.5 }
 				
 				change_variable = { which = newWorldINo			which = penalty }
-				log = "newWorldINo [This.newWorldINo.GetValue]"
+				#log = "newWorldINo [This.newWorldINo.GetValue]"
 			}
 			if = { limit = { is_institution_enabled = printing_press }
 				if = { limit = { NOT = { check_variable = { which = printing_press_year value = 1549 } } }
@@ -89,7 +89,7 @@ country_event = {
 				MIN_value			  = { which = penalty		value = 0.5 }
 				
 				change_variable = { which = printingPressNo		which = penalty }
-				log = "printingPressNo [This.printingPressNo.GetValue]"
+				#log = "printingPressNo [This.printingPressNo.GetValue]"
 			}
 			if = { limit = { is_institution_enabled = global_trade }
 				if = { limit = { NOT = { check_variable = { which = global_trade_year value = 1599 } } }
@@ -102,7 +102,7 @@ country_event = {
 				MIN_value			  = { which = penalty		value = 0.5 }
 				
 				change_variable = { which = globalTradeNo		which = penalty }
-				log = "globalTradeNo [This.globalTradeNo.GetValue]"
+				#log = "globalTradeNo [This.globalTradeNo.GetValue]"
 			}
 			if = { limit = { is_institution_enabled = manufactories }
 				if = { limit = { NOT = { check_variable = { which = manufactories_year value = 1649 } } }
@@ -115,7 +115,7 @@ country_event = {
 				MIN_value			  = { which = penalty		value = 0.5 }
 				
 				change_variable = { which = manufactoriesNo		which = penalty }
-				log = "manufactoriesNo [This.manufactoriesNo.GetValue]"
+				#log = "manufactoriesNo [This.manufactoriesNo.GetValue]"
 			}
 			if = { limit = { is_institution_enabled = enlightenment }
 				if = { limit = { NOT = { check_variable = { which = enlightenment_year value = 1699 } } }
@@ -128,7 +128,7 @@ country_event = {
 				MIN_value			  = { which = penalty		value = 0.5 }
 				
 				change_variable = { which = enlightenmentNo		which = penalty }
-				log = "enlightenmentNo [This.enlightenmentNo.GetValue]"
+				#log = "enlightenmentNo [This.enlightenmentNo.GetValue]"
 			}
 	}
 	
