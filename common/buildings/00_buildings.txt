@@ -36,7 +36,8 @@ marketplace = {
 	}
 
 	ai_will_do = {
-		factor = 8.0 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+		factor = 40.0 # Because hard-coded AI only considers what it will gain, not what its enemies will lose.
+
 	}
 }
 
@@ -72,6 +73,14 @@ temple = {
 
 	ai_will_do = {
 		factor = 30.0
+		modifier = {
+			factor = 100
+			FROM = {
+				NOT = {
+					is_year = 1550
+				}
+			}
+		}
 	}
 }
 
@@ -215,7 +224,13 @@ courthouse = {
 	}
 
 	ai_will_do = {
-		factor = 5.0
+		factor = 1000.0
+		modifier = {
+			factor = 2.0
+			FROM = {
+				num_of_provinces_in_territories = 4
+			}
+		}
 	}
 }
 
@@ -356,7 +371,7 @@ cathedral = {
 	}
 
 	ai_will_do = {
-		factor = 0.3
+		factor = 100
 	}
 }
 
@@ -371,7 +386,7 @@ university = {
 
 	ai_will_do = {
 		# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
-		factor = 15.0
+		factor = 250.0
 		modifier = {
 			factor = 20
 			development = 20
@@ -571,7 +586,7 @@ counting_house = {
 	allow_in_gold_provinces = no
 
 	ai_will_do = {
-		factor = 0.5
+		factor = 500
 	}
 }
 
@@ -591,7 +606,13 @@ town_hall = {
 	}
 
 	ai_will_do = {
-		factor = 5.0
+		factor = 1000.0
+		modifier = {
+			factor = 2.0
+			FROM = {
+				num_of_provinces_in_territories = 4
+			}
+		}
 	}
 }
 
@@ -651,7 +672,7 @@ conscription_center = {
 	ai_will_do = {
 		factor = 20.0
 		modifier = {
-			factor = 1000 # Little above build cost
+			factor = 3000 # Little above build cost
 			FROM = { 
 				army_size_percentage = 0.95 
 				current_income_balance = 50
