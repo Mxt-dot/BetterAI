@@ -19,7 +19,16 @@ country_decisions = {
 			# 	}
 		}
 		allow = {
-			
+			NOT = {
+				calc_true_if = {
+					all_owned_province = {
+						NOT = {
+							controlled_by = ROOT
+						}
+					}
+					amount = 1
+				}
+			}
 		}
 		effect = {
 			hidden_effect = {
