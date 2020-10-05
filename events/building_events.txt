@@ -9,19 +9,74 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		ai = yes
-		NOT = {
-			num_of_loans = 1
+		OR = {
+			AND = {
+				ai = yes
+				NOT = {
+					num_of_loans = 1
+				}
+				is_at_war = no
+				treasury = 600
+				current_income_balance = 10
+				manpower_percentage = 0.1
+			}
+			AND = {
+				ai = yes
+				has_country_modifier = bankruptcy_building
+				NOT = {
+					has_country_modifier = bankruptcy_building_completed
+				}
+				# OR = {
+				# 	AND = {
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = -2
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 60
+				# 		}		
+				# 	}
+				# 	AND = {
+				# 		has_global_modifier_value = {
+				# 			which = interest
+				# 			value = -2
+				# 		}
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = -1
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 40
+				# 		}		
+				# 	}
+				# 	AND = {
+				# 		has_global_modifier_value = {
+				# 			which = interest
+				# 			value = -1
+				# 		}
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = 0
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 30
+				# 		}		
+				# 	}
+				# 	NOT = {
+				# 		num_of_loans = 25
+				# 	}
+				# }
+				is_bankrupt = no
+			}
 		}
-		is_at_war = no
-		treasury = 600
-		current_income_balance = 10
-		manpower_percentage = 0.1
 	}
 
-	mean_time_to_happen = {
-		months = 3
-	}
 	immediate = {
 		random_owned_province = {
 			limit = {
@@ -46,19 +101,81 @@ country_event = {
 				# 	trade_goods = gems
 				# }
 				OR = {
-					can_build = farm_estate
-					can_build = wharf
-					can_build = weapons
-					can_build = textile
-					can_build = plantations
-					can_build = tradecompany
-					can_build = mills
-					can_build = furnace
+					AND = {
+						has_building = temple
+						NOT = {
+							num_free_building_slots = 1
+						}
+						AND = {
+							NOT = {
+								has_building = farm_estate
+							}
+							NOT = {
+								has_building = wharf
+							}
+							NOT = {
+								has_building = weapons
+							}
+							NOT = {
+								has_building = textile
+							}
+							NOT = {
+								has_building = plantations
+							}
+							NOT = {
+								has_building = tradecompany
+							}
+							NOT = {
+								has_building = mills
+							}
+							NOT = {
+								has_building = furnace
+							}
+						}
+					}
+					OR = {
+						can_build = farm_estate
+						can_build = wharf
+						can_build = weapons
+						can_build = textile
+						can_build = plantations
+						can_build = tradecompany
+						can_build = mills
+						can_build = furnace
+					}
 				}
 				NOT = {
 					has_construction = building
 				}
 			}
+			if = {
+				limit = {
+					has_building = temple
+					NOT = {
+						num_free_building_slots = 1
+					}
+				}
+				remove_building = temple
+			}
+			if = {
+				limit = {
+					OR = {
+						can_build = farm_estate
+						can_build = wharf
+						can_build = weapons
+						can_build = textile
+						can_build = plantations
+						can_build = tradecompany
+						can_build = tradecompany
+						can_build = mills
+						can_build = furnace
+					}
+				}
+			}
+			else = {
+				add_building = temple
+			}
+
 			if = {
 				limit = {
 					can_build = farm_estate
@@ -69,7 +186,7 @@ country_event = {
 					cost = 1
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					can_build = wharf
 				}
@@ -79,7 +196,7 @@ country_event = {
 					cost = 1
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					can_build = weapons
 				}
@@ -89,7 +206,7 @@ country_event = {
 					cost = 1
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					can_build = textile
 				}
@@ -99,7 +216,7 @@ country_event = {
 					cost = 1
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					can_build = plantations
 				}
@@ -109,7 +226,7 @@ country_event = {
 					cost = 1
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					can_build = tradecompany
 				}
@@ -119,7 +236,7 @@ country_event = {
 					cost = 1
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					can_build = mills
 				}
@@ -129,7 +246,7 @@ country_event = {
 					cost = 1
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					can_build = furnace
 				}
@@ -156,14 +273,72 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		ai = yes
-		NOT = {
-			num_of_loans = 1
-		}
-		treasury = 600
-		current_income_balance = 30
-		NOT  ={
-			manpower_percentage = 0.1
+		OR = {
+			AND = {
+				ai = yes
+				NOT = {
+					num_of_loans = 1
+				}
+				treasury = 300
+				current_income_balance = 15
+				NOT  ={
+					manpower_percentage = 0.1
+				}
+			}
+			AND = {
+				ai = yes
+				has_country_modifier = bankruptcy_building
+				NOT = {
+					has_country_modifier = bankruptcy_building_completed
+				}
+				# OR = {
+				# 	AND = {
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = -2
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 60
+				# 		}		
+				# 	}
+				# 	AND = {
+				# 		has_global_modifier_value = {
+				# 			which = interest
+				# 			value = -2
+				# 		}
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = -1
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 40
+				# 		}		
+				# 	}
+				# 	AND = {
+				# 		has_global_modifier_value = {
+				# 			which = interest
+				# 			value = -1
+				# 		}
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = 0
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 30
+				# 		}		
+				# 	}
+				# 	NOT = {
+				# 		num_of_loans = 25
+				# 	}
+				# }
+				is_bankrupt = no
+			}
 		}
 	}
 
@@ -211,7 +386,7 @@ country_event = {
 }
 
 country_event = {
-	# building trigger manpower
+	# building trigger workshops
 	id = building_events.3
 	title = building_events.3.t
 	desc = building_events.3.d
@@ -219,30 +394,84 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		ai = yes
-		NOT = {
-			num_of_loans = 1
-		}
 		OR = {
 			AND = {
-				treasury = 200
-				current_income_balance = 8
+				ai = yes
 				NOT = {
-					current_income_balance = 30
+					num_of_loans = 1
 				}
+				OR = {
+					AND = {
+						treasury = 200
+						current_income_balance = 8
+						NOT = {
+							current_income_balance = 30
+						}
+					}
+					AND = {
+						treasury = 600
+						current_income_balance = 30
+					}
+				}
+				manpower_percentage = 0.1
 			}
 			AND = {
-				treasury = 600
-				current_income_balance = 30
+				ai = yes
+				has_country_modifier = bankruptcy_building
+				NOT = {
+					has_country_modifier = bankruptcy_building_completed
+				}
+				# OR = {
+				# 	AND = {
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = -2
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 60
+				# 		}		
+				# 	}
+				# 	AND = {
+				# 		has_global_modifier_value = {
+				# 			which = interest
+				# 			value = -2
+				# 		}
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = -1
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 40
+				# 		}		
+				# 	}
+				# 	AND = {
+				# 		has_global_modifier_value = {
+				# 			which = interest
+				# 			value = -1
+				# 		}
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = 0
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 30
+				# 		}		
+				# 	}
+				# 	NOT = {
+				# 		num_of_loans = 25
+				# 	}
+				# }
+				is_bankrupt = no
 			}
 		}
 		
-		manpower_percentage = 0.1
 	}
-	mean_time_to_happen = {
-		months = 3
-	}
-
 	immediate = {
 		random_owned_province = {
 			limit = {
@@ -277,41 +506,100 @@ country_event = {
 	hidden = yes
 
 	trigger = {
-		ai = yes
-		NOT = {
-			num_of_loans = 1
-		}
-		treasury = 500
-		current_income_balance = 25
-		manpower_percentage = 0.1
-		army_size_percentage = 0.60
 		OR = {
-			calc_true_if = {
-				all_enemy_country = {
-					army_strength = {
-						who = ROOT
-						value = 0.85
-					}
+			AND = {
+				ai = yes
+				NOT = {
+					num_of_loans = 1
 				}
-				amount = 1
-			}
-			calc_true_if = {
-				all_neighbor_country = {
-					NOT = {
-						reverse_has_opinion = {
-							who = ROOT
-							value = 0
+				treasury = 400
+				current_income_balance = 15
+				manpower_percentage = 0.1
+				army_size_percentage = 0.40
+				OR = {
+					calc_true_if = {
+						all_enemy_country = {
+							army_strength = {
+								who = ROOT
+								value = 0.85
+							}
 						}
+						amount = 1
 					}
-					army_strength = {
-						who = ROOT
-						value = 0.7
+					calc_true_if = {
+						all_neighbor_country = {
+							NOT = {
+								reverse_has_opinion = {
+									who = ROOT
+									value = 0
+								}
+							}
+							army_strength = {
+								who = ROOT
+								value = 0.7
+							}
+						}
+						amount = 1
 					}
+		
 				}
-				amount = 1
 			}
-
+			AND = {
+				ai = yes
+				has_country_modifier = bankruptcy_building
+				NOT = {
+					has_country_modifier = bankruptcy_building_completed
+				}
+				# OR = {
+				# 	AND = {
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = -2
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 60
+				# 		}		
+				# 	}
+				# 	AND = {
+				# 		has_global_modifier_value = {
+				# 			which = interest
+				# 			value = -2
+				# 		}
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = -1
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 40
+				# 		}		
+				# 	}
+				# 	AND = {
+				# 		has_global_modifier_value = {
+				# 			which = interest
+				# 			value = -1
+				# 		}
+				# 		NOT = {
+				# 			has_global_modifier_value = {
+				# 				which = interest
+				# 				value = 0
+				# 			}
+				# 		}
+				# 		NOT = {
+				# 			num_of_loans = 30
+				# 		}		
+				# 	}
+				# 	NOT = {
+				# 		num_of_loans = 25
+				# 	}
+				# }
+				is_bankrupt = no
+			}
 		}
+		
 	}
 	immediate = {
 		random_owned_province = {
@@ -353,3 +641,85 @@ country_event = {
 		
 	}
 }
+
+# country_event = {
+# 	id = building_events.5
+# 	title = building_events.5.t
+# 	desc = building_events.5.d
+# 	picture = INVENTION_eventPicture
+# 	hidden = yes
+
+# 	trigger = {
+# 		OR = {
+# 			AND = {
+# 				ai = yes
+# 				NOT = {
+# 					num_of_loans = 1
+# 				}
+# 				is_at_war = no
+# 				treasury = 600
+# 				current_income_balance = 10
+# 				manpower_percentage = 0.05
+# 			}
+# 			AND = {
+# 				ai = yes
+# 				has_country_modifier = bankruptcy_building
+# 				OR = {
+# 					AND = {
+# 						NOT = {
+# 							has_global_modifier_value = {
+# 								which = interest
+# 								value = -2
+# 							}
+# 						}
+# 						NOT = {
+# 							num_of_loans = 60
+# 						}		
+# 					}
+# 					AND = {
+# 						has_global_modifier_value = {
+# 							which = interest
+# 							value = -2
+# 						}
+# 						NOT = {
+# 							has_global_modifier_value = {
+# 								which = interest
+# 								value = -1
+# 							}
+# 						}
+# 						NOT = {
+# 							num_of_loans = 40
+# 						}		
+# 					}
+# 					AND = {
+# 						has_global_modifier_value = {
+# 							which = interest
+# 							value = -1
+# 						}
+# 						NOT = {
+# 							has_global_modifier_value = {
+# 								which = interest
+# 								value = 0
+# 							}
+# 						}
+# 						NOT = {
+# 							num_of_loans = 30
+# 						}		
+# 					}
+# 					NOT = {
+# 						num_of_loans = 25
+# 					}
+# 				}
+# 				is_bankrupt = no
+# 			}
+# 		}
+# 	}
+
+# 	immediate = {
+		
+# 	}
+
+# 	option = {
+		
+# 	}
+# }

@@ -1,0 +1,264 @@
+namespace = bankruptcy_events
+country_event = {
+	# invest early people. Future-you will thank you.
+	id = bankruptcy_events.1
+	title = bankruptcy_events.1.t
+	desc = bankruptcy_events.1.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		ai = yes
+		adm_power = 300
+		NOT = {
+			has_country_modifier = bankruptcy_insurance
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = bankruptcy_insurance
+				duration = -1
+			}
+			add_adm_power = -300
+		}
+	}
+	option = {
+		
+	}
+}
+
+country_event = {
+	# oh yeah let's bankruptcy build
+	id = bankruptcy_events.2
+	title = bankruptcy_events.2.t
+	desc = bankruptcy_events.2.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+
+	trigger = {
+		always = no # for now let's not trigger this until a better fix for more efficient bankruptcy building. / a fix for those variable issues
+		ai = yes
+		is_at_war = no
+		num_of_loans = 12
+		is_bankrupt = no
+		NOT = {
+			num_of_loans = 25
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = bankruptcy_building
+				duration = 4745
+			}
+			set_variable = {
+				which = trade_eff
+				value = 1
+			}
+			if = {
+				limit = {
+					dip_tech = 3
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 5
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 10
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 13
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 16
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 20
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 24
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 28
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 30
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					dip_tech = 32
+				}
+				change_variable = {
+					which = trade_eff
+					value = 2
+				}
+			}
+
+			set_variable = {
+				which = loansize
+				which = total_development
+			}
+
+			multiply_variable = {
+				which = loansize
+				value = 0.5
+			}
+			multiply_variable = {
+				which = loansize
+				which = trade_eff
+			}
+
+			set_variable = {
+				which = amountloans
+				which = loansize
+			}
+			set_variable = {
+				which = monthlydebt
+				which = amountloans
+			}
+			if = {
+				limit = {
+					has_global_modifier_value = {
+						which = interest
+						value = 0
+					}
+				}
+				multiply_variable = {
+					which = monthlydebt
+					value = 0.04
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_modifier_value = {
+						which = interest
+						value = -1
+					}
+					NOT = {
+						has_global_modifier_value = {
+							which = interest
+							value = 0
+						}	
+					}
+				}
+				multiply_variable = {
+					which = monthlydebt
+					value = 0.03
+				}
+			}
+			else_if = {
+				limit = {
+					has_global_modifier_value = {
+						which = interest
+						value = -2
+					}
+					NOT = {
+						has_global_modifier_value = {
+							which = interest
+							value = -1
+						}
+					}
+				}
+				multiply_variable = {
+					which = monthlydebt
+					value = 0.02
+				}
+			}
+			export_to_variable = {
+				which = takeoutloans
+				value = monthly_income
+			}
+			
+			divide_variable = {
+				which = takeoutloans
+				which = monthlydebt
+			}
+			multiply_variable = {
+				which = takeoutloans
+				value = 0.7
+			}
+			set_variable = {
+				which = custom_numloans
+				value = num_of_loans
+			}
+			while = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = custom_numloans
+							which = takeoutloans
+						}
+					}
+				}
+				# country_event = {
+				# 	id = building_events.1
+				# }
+				# country_event = {
+				# 	id = building_events.3
+				# }
+			}
+			add_country_modifier = {
+				name = bankruptcy_building_completed
+				duration = 4745
+			}
+		}
+	}
+	option = {
+		
+	}
+}
