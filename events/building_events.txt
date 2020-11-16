@@ -723,3 +723,169 @@ country_event = {
 		
 # 	}
 # }
+
+country_event = {
+	id = building_events.6
+	# 	title = building_events.6.t
+	# 	desc = building_events.6.d
+	# 	picture = INVENTION_eventPicture
+	# 	hidden = yes
+
+	trigger = {
+		ai = yes
+		treasury = 3000
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				OR = {
+					can_build = marketplace
+					can_build = trade_depot
+					can_build = stock_exchange
+
+					can_build = workshop
+					can_build = counting_house
+
+					can_build = barracks
+					can_build = training_fields
+
+					can_build = courthouse
+					can_build = town_hall
+
+					can_build = regimental_camp
+					can_build = conscription_center
+
+					can_build = university
+				}
+			}
+			if = {
+				limit = {
+					can_build = university
+				}
+				add_building_construction = {
+					building = university
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = courthouse
+				}
+				add_building_construction = {
+					building = courthouse
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = town_hall
+				}
+				add_building_construction = {
+					building = town_hall
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = workshop
+				}
+				add_building_construction = {
+					building = workshop
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = counting_house
+				}
+				add_building_construction = {
+					building = counting_house
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = barracks
+				}
+				add_building_construction = {
+					building = barracks
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = training_fields
+				}
+				add_building_construction = {
+					building = training_fields
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = regimental_camp
+				}
+				add_building_construction = {
+					building = regimental_camp
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = conscription_center
+				}
+				add_building_construction = {
+					building = conscription_center
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = marketplace
+				}
+				add_building_construction = {
+					building = marketplace
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = trade_depot
+				}
+				add_building_construction = {
+					building = trade_depot
+					speed = 1
+					cost = 1
+				}
+			}
+			else_if = {
+				limit = {
+					can_build = stock_exchange
+				}
+				add_building_construction = {
+					building = stock_exchange
+					speed = 1
+					cost = 1
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+	option = {
+		
+	}
+}
