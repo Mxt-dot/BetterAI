@@ -41,11 +41,14 @@ country_decisions = {
 				while = {
 					limit = {
 						NOT = {
-							army_size_percentage = 0.5
+							army_size_percentage = 0.35
 						}
 						ROOT = {
 							manpower = 3
 							treasury = 35
+							NOT = {
+								num_of_loans = 5
+							}
 						}
 					}
 					capital_scope = {
