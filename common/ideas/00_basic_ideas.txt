@@ -1595,15 +1595,14 @@ expansion_ideas = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				NOT = { has_idea_group = exploration_ideas }
-				NOT = { is_colonial_nation = yes }
-				NOT = {
-					any_owned_province = {
-						has_empty_adjacent_province = yes
-					}
+			NOT = { has_idea_group = exploration_ideas }
+			NOT = { is_colonial_nation = yes }
+			NOT = {
+				any_owned_province = {
+					has_empty_adjacent_province = yes
 				}
 			}
+			
 		}
 		modifier = { # Portugal build
 			factor = 10000
