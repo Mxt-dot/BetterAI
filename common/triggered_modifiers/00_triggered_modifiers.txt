@@ -870,10 +870,14 @@ defense_of_the_empire_modifier = {
 aiBonus_age_of_reformation = {
 	potential = {
 			ai = yes
+			NOT = { has_global_flag = fl_bonuses_disabled}
+			NOT = { has_global_flag = ALL_bonuses_disabled}
 			current_age = age_of_reformation
 	}
 	trigger = {
 			ai = yes
+			NOT = { has_global_flag = fl_bonuses_disabled}
+			NOT = { has_global_flag = ALL_bonuses_disabled}
 			current_age = age_of_reformation		
 	}
 	land_forcelimit_modifier = 0.1
@@ -883,10 +887,14 @@ aiBonus_age_of_reformation = {
 aiBonus_age_of_absolutism = {
 	potential = {
 				ai = yes
+				NOT = { has_global_flag = fl_bonuses_disabled}
+				NOT = { has_global_flag = ALL_bonuses_disabled}
 				current_age = age_of_absolutism
 	}
 	trigger = {
 			ai = yes
+			NOT = { has_global_flag = fl_bonuses_disabled}
+			NOT = { has_global_flag = ALL_bonuses_disabled}
 			current_age = age_of_absolutism
 	}
 	land_forcelimit_modifier = 0.25
@@ -897,10 +905,14 @@ aiBonus_age_of_absolutism = {
 aiBonus_age_of_revolutions = {
 	potential = {
 				ai = yes
+				NOT = { has_global_flag = fl_bonuses_disabled}
+				NOT = { has_global_flag = ALL_bonuses_disabled}
 				current_age = age_of_revolutions
 	}
 	trigger = {
 			ai = yes
+			NOT = { has_global_flag = fl_bonuses_disabled}
+			NOT = { has_global_flag = ALL_bonuses_disabled}
 			current_age = age_of_revolutions
 	}
 	land_forcelimit_modifier = 0.5
@@ -911,9 +923,14 @@ aiBonus_age_of_revolutions = {
 aiDevEdictBonus = {
 	potential = {
 		ai = yes
+		NOT = { has_global_flag = dev_bonuses_disabled}
+		NOT = { has_global_flag = ALL_bonuses_disabled}
 	}
 	trigger = {
 		ai = yes
+		NOT = { has_global_flag = dev_bonuses_disabled}
+		NOT = { has_global_flag = ALL_bonuses_disabled}
+
 	}
 	development_cost = -0.1
 }
@@ -921,6 +938,8 @@ aiDevEdictBonus = {
 aiDevSchoolBonus = {
 	potential = {
 		ai = yes
+		NOT = { has_global_flag = dev_bonuses_disabled}
+		NOT = { has_global_flag = ALL_bonuses_disabled}
 		NOT = {
 			religious_school = {
 				group = muslim
@@ -930,6 +949,8 @@ aiDevSchoolBonus = {
 	}
 	trigger = {
 		ai = yes
+		NOT = { has_global_flag = dev_bonuses_disabled}
+		NOT = { has_global_flag = ALL_bonuses_disabled}
 		NOT = {
 			religious_school = {
 				group = muslim

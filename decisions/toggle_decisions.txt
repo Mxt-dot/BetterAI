@@ -1,0 +1,109 @@
+country_decisions = {
+	FL_bonus_set_on = {
+		major = yes
+		potential = {
+			ai = no
+			has_global_flag = fl_bonuses_disabled
+		}
+		allow = {
+			ai = no
+			has_global_flag = fl_bonuses_disabled
+		}
+		effect = {
+			clr_global_flag = fl_bonuses_disabled
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	FL_bonus_set_off = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = {has_global_flag = fl_bonuses_disabled}
+		}
+		allow = {
+			ai = no
+			NOT = {has_global_flag = fl_bonuses_disabled}
+		}
+		effect = {
+			set_global_flag = fl_bonuses_disabled
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	dev_bonus_set_on = {
+		major = yes
+		potential = {
+			ai = no
+			has_global_flag = dev_bonuses_disabled
+		}
+		allow = {
+			ai = no
+			has_global_flag = dev_bonuses_disabled
+		}
+		effect = {
+			clr_global_flag = dev_bonuses_disabled
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	dev_bonus_set_off = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = {has_global_flag = dev_bonuses_disabled}
+		}
+		allow = {
+			ai = no
+			NOT = {has_global_flag = dev_bonuses_disabled}
+		}
+		effect = {
+			set_global_flag = dev_bonuses_disabled
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	ALL_bonus_set_on = {
+		major = yes
+		potential = {
+			ai = no
+			has_global_flag = ALL_bonuses_disabled
+		}
+		allow = {
+			ai = no
+			has_global_flag = ALL_bonuses_disabled
+		}
+		effect = {
+			clr_global_flag = ALL_bonuses_disabled
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	ALL_bonus_set_off = {
+		major = yes
+		potential = {
+			ai = no
+			NOT = {has_global_flag = ALL_bonuses_disabled}
+		}
+		allow = {
+			ai = no
+			NOT = {has_global_flag = ALL_bonuses_disabled}
+		}
+		effect = {
+			set_global_flag = ALL_bonuses_disabled
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}
