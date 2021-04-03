@@ -163,13 +163,20 @@ interaction = {
 
     effect = {
         custom_tooltip = ESTATES_SUMMON_THE_DIET_DESC
-        hidden_effect = {
-	        country_event = { id = estate_privileges_and_agendas_events.3 }               
-        }
+		if = {
+			limit = {
+				ai = no
+			}
+			hidden_effect = {
+				country_event = { id = estate_privileges_and_agendas_events.3 }               
+			}
+		}
+        
         custom_tooltip = SEPERATOR_TOOLTIP
         
 		if = {
 			limit = {
+				ai = no
 				has_country_flag = recent_estate_agenda
 			}
 			clr_country_flag = recent_estate_agenda
@@ -190,7 +197,7 @@ interaction = {
         }
     }
 	ai_will_do = {
-		factor = 0 # AI won't do agendas
+		factor = 1000
 	}
 }
 
